@@ -1,0 +1,6 @@
+/* possible add for box-sizing, display for img/pictures/svg, inherit props, overflow-wrap etc */
+body {
+  margin: 0;
+  padding: 0;
+  min-width:;
+}

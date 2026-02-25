@@ -1,0 +1,123 @@
+/* our design system, one file to rule them all: values for the variables used on our site.
+
+TOKENS:
+- colors primitive (not for use in components)
+- colors semantic
+- spacing + layout
+- borders
+- shadows
+- typography
+- theme specific
+
+*/
+
+:root {
+  /* color palett for this file only, use these for more readable tokens below*/
+  /* COLORS PRIMITIVE*/
+  --white: #fff;
+  --black: #000;
+
+  --green: ;
+  --orange: ;
+  --red: ;
+  --grey: ;
+}
+
+/* ---------------- COLORS SEMANTIC ----------------------
+-----------these are used inside the components-----*/
+:root {
+  --color-bg: var(--white);
+  --color-text: var(--black);
+
+  --color-primary: ;
+  --color-secondary: ;
+  --color-accent: ;
+
+  --color-success: var(--green);
+  --color-warning: var(--orange);
+  --color-error: var(--red);
+  --color-disabled: var(--grey);
+}
+
+/* ---------------- SPACING + LAYOUT ----------------------*/
+:root {
+  --space-xs: ;
+  --space-sm: ;
+  --space-md: ;
+  --space-lg: ;
+  --space-xl: ;
+
+  --width-xs: ;
+  --width-sm: ;
+  --width-md: ;
+  --width-lg: ;
+  --width-xl: ;
+}
+
+/* ---------------- BORDERS ----------------------*/
+:root {
+  --radius-sm: ;
+  --radius-md: ;
+  --radius-lg: ;
+
+  --border-width-sm: ;
+  --border-width-md: ;
+  --border-width-lg: ;
+}
+
+/* ---------------- SHADOWS ----------------------*/
+
+:root {
+  --shadow-sm: ;
+  --shadow-md: ;
+  --shadow-lg: ;
+}
+
+/* ---------------- TYPOGRAPHY ----------------------*/
+:root {
+  --font-body: ;
+  --font-heading: ;
+
+  --font-size-xs: ;
+  --font-size-sm: ;
+  --font-size-base: ;
+  --font-size-lg: ;
+  --font-size-xl: ;
+
+  --font-size-h1: ;
+  --font-size-h2: ;
+  --font-size-h3: ;
+  --font-size-h4: ;
+  --font-size-h5: ;
+  --font-size-h6: ;
+
+  --font-weight-thin: ;
+  --font-weight-normal: ;
+  --font-weight-medium: ;
+  --font-weight-bold: ;
+  --font-weight-black: ;
+
+  --line-height-small: ;
+  --line-height-medium: ;
+  --line-height-grand: ;
+
+  /* letter spacing? */
+}
+
+/* ---------------- THEME specific ----------------------*/
+
+:root {
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: ;
+    --background-text: ;
+
+    --color-border: ;
+
+    --color-accent: ;
+    --color-disabled: ;
+  }
+}

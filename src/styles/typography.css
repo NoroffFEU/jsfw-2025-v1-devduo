@@ -1,0 +1,70 @@
+/*-----------------------Base-----------------------*/
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*-----------------------Headings-----------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  fontweight: ;
+  line-height: ;
+  color: var(--color-text);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+}
+h2 {
+  font-size: var(--font-size-h2);
+}
+h3 {
+  font-size: var(--font-size-h3);
+}
+h4 {
+  font-size: var(--font-size-h4);
+}
+h5 {
+  font-size: var(--font-size-h5);
+}
+h6 {
+  font-size: var(--font-size-h6);
+}
+
+/*-----------------------Body Text-----------------------*/
+
+p {
+  max-width: ;
+  text-wrap: pretty;
+  margin-block-end: var(--space-md);
+}
+
+
+/*-----------------------Links-----------------------*/
+a {
+  color: var(--color-primary);
+  text-decoration: ;
+  text-underline-offset: ;
+}
+a:hover {
+  color: var(--color-primary-hover);
+}
+a:focus-visible {
+  outline: ;
+  outline-offset: ;
+  border-radius: ;
+}
+
+/*----------------------- XXXX -----------------------*/
