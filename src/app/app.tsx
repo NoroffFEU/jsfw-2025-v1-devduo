@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from '../components/layout/layout.tsx';
+import Layout from '../components/layout/Layout.tsx';
 import CartPage from '../pages/cartPage.tsx';
 import CheckoutSuccessPage from '../pages/checkoutSuccessPage.tsx';
 import ContactPage from '../pages/contactPage.tsx';
