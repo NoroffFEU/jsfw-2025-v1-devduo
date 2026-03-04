@@ -31,11 +31,12 @@
     "vite": "^7.3.1"
   },
   "lint-staged": {
-    "*.{js,mjs,html,css}": [
+    "*.{tsx,ts,jsx,js,mjs}": [
+      "eslint --fix",
       "prettier --write"
     ],
-    "*.{js,mjs}": [
-      "eslint --fix"
+    "*.{html,css,json,md}": [
+      "prettier --write"
     ]
   }
 }
