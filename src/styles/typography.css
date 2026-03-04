@@ -19,8 +19,8 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  fontweight: ;
-  line-height: ;
+  fontweight:;
+  line-height:;
   color: var(--color-text);
 }
 
@@ -46,25 +46,24 @@ h6 {
 /*-----------------------Body Text-----------------------*/
 
 p {
-  max-width: ;
+  max-width:;
   text-wrap: pretty;
   margin-block-end: var(--space-md);
 }
 
-
 /*-----------------------Links-----------------------*/
 a {
   color: var(--color-primary);
-  text-decoration: ;
-  text-underline-offset: ;
+  text-decoration:;
+  text-underline-offset:;
 }
 a:hover {
   color: var(--color-primary-hover);
 }
 a:focus-visible {
-  outline: ;
-  outline-offset: ;
-  border-radius: ;
+  outline:;
+  outline-offset:;
+  border-radius:;
 }
 
 /*----------------------- XXXX -----------------------*/
