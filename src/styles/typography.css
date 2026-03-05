@@ -1,9 +1,8 @@
 /*-----------------------Base-----------------------*/
 body {
   font-family: var(--font-body);
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-normal);
-  color: var(--background-text);
+  font-size: var(--font-size-paragraph);
+  color: var(--color-text);
   background-color: var(--color-bg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,9 +18,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  fontweight:;
-  line-height:;
-  color: var(--background-text);
+  color: var(--color-text);
 }
 
 h1 {
@@ -46,24 +43,21 @@ h6 {
 /*-----------------------Body Text-----------------------*/
 
 p {
-  max-width:;
   text-wrap: pretty;
-  margin-block-end: var(--space-md);
+  /* margin-block-end: var(--space-md); */
 }
 
 /*-----------------------Links-----------------------*/
 a {
   color: var(--color-primary);
-  text-decoration:;
-  text-underline-offset:;
+  /* text-decoration:;
+  text-underline-offset:; */
 }
 a:hover {
-  color: var(--color-primary-hover);
+  color: var(--color-gray);
 }
-a:focus-visible {
+/* a:focus-visible {
   outline:;
   outline-offset:;
   border-radius:;
-}
-
-/*----------------------- XXXX -----------------------*/
+} */
