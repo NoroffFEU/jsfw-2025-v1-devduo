@@ -36,20 +36,14 @@ h4 {
 
 p {
   text-wrap: pretty;
-  /* margin-block-end: var(--space-md); */
 }
 
 /*-----------------------Links-----------------------*/
 a {
   color: var(--color-primary);
-  /* text-decoration:;
-  text-underline-offset:; */
+  text-decoration: none;
 }
+
 a:hover {
-  color: var(--color-gray);
+  filter: opacity(0.8);
 }
-/* a:focus-visible {
-  outline:;
-  outline-offset:;
-  border-radius:;
-} */
