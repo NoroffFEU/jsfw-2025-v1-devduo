@@ -7,9 +7,9 @@ import { defineConfig, globalIgnores } from "eslint/config";
 import eslintConfigPrettier from "eslint-config-prettier";
 
 export default defineConfig([
-  globalIgnores(["dist"]),
+  globalIgnores(["dist", "public", "*.config.ts", "*.config.js"]),
   {
-    files: ["**/*.{ts,tsx}"],
+    files: ["**/*.{ts,tsx,js,jsx}"],
     extends: [
       js.configs.recommended,
       tseslint.configs.recommended,
@@ -18,7 +18,7 @@ export default defineConfig([
       reactRefresh.configs.vite,
     ],
     languageOptions: {
-      ecmaVersion: 2020,
+      ecmaVersion: 2022,
       globals: globals.browser,
     },
   },

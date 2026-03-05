@@ -1,3 +1,0 @@
-# This project uses ESLint v9 flat config (`eslint.config.js`).
-# In flat-config mode, `.eslintignore` is not applied.
-# Configure ignore patterns via `globalIgnores(...)` in `eslint.config.js`.
