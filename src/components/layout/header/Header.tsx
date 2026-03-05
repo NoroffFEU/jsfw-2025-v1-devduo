@@ -1,12 +1,7 @@
-import Nav from "./Nav.tsx";
+import styles from "./Header.module.css";
 
 const Header = () => {
-  return (
-    <header>
-      /* logo here */
-      <Nav />
-    </header>
-  );
+  return <header className={styles.headerContainer}>Header is coming here</header>;
 };
 
 export default Header;
