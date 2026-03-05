@@ -1,6 +1,12 @@
 /* possible add for box-sizing, display for img/pictures/svg, inherit props, overflow-wrap etc */
-body {
-  margin: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   padding: 0;
-  min-width:;
+  margin: 0;
+}
+
+body {
+  height: 100%;
 }

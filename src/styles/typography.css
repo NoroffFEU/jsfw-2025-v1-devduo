@@ -3,7 +3,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-normal);
-  color: var(--color-text);
+  color: var(--background-text);
   background-color: var(--color-bg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;

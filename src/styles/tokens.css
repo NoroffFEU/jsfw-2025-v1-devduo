@@ -108,16 +108,24 @@ TOKENS:
 
 :root {
   color-scheme: light dark;
+
+  --color-bg: #ffffff;
+  --background-text: #000000;
+
+  --color-border: #dcdcdc;
+
+  --color-accent: #2563eb;
+  --color-disabled: #9ca3af;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: ;
-    --background-text: ;
+    --color-bg: #121212;
+    --background-text: #ffffff;
 
-    --color-border: ;
+    --color-border: #333;
 
-    --color-accent: ;
-    --color-disabled: ;
+    --color-accent: #3b82f6;
+    --color-disabled: #555;
   }
 }
