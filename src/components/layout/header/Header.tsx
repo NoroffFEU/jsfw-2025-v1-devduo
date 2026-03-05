@@ -1,10 +1,10 @@
-import Nav from "./Nav.tsx";
+import styles from "./Header.module.css";
 
 const Header = () => {
   return (
-    <header>
-      /* logo here */
-      <Nav />
+    <header className={styles.headerContainer}>
+      Header is coming here
+      <a href="asd">test</a>
     </header>
   );
 };

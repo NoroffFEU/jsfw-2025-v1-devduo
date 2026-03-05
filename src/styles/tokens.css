@@ -1,131 +1,72 @@
-/* our design system, one file to rule them all: values for the variables used on our site.
-
-TOKENS:
-- colors primitive (not for use in components)
-- colors semantic
-- spacing + layout
-- borders
-- shadows
-- typography
-- theme specific
-
-*/
-
 :root {
-  /* color palett for this file only, use these for more readable tokens below*/
-  /* COLORS PRIMITIVE*/
-  --white: #fff;
-  --black: #000;
+  /* COLORS - PRIMITIVE (not used directly in components) */
+  --color-black: #131313;
+  --color-white: #f6f6f6;
+  --color-orange: #ff803b;
+  --color-red: #a71508;
+  --color-gray: #c9d2d4;
+  --color-green: #284b4f;
 
-  --green: ;
-  --orange: ;
-  --red: ;
-  --grey: ;
+  /* SPACING */
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+
+  /* WIDTH */
+  --width-sm: 450px;
+  --width-md: 650px;
+  --width-lg: 900px;
+  --width-xl: 1200px;
+
+  /* BORDERS */
+  --border-radius: 0.3125rem;
+  --border-width: 1px;
+
+  /* SHADOWS */
+  --shadow-button: 1px 2px 2px 0 rgba(19, 19, 19, 0.25);
+
+  /* TYPOGRAPHY */
+  --font-body: "Open Sans", sans-serif;
+  --font-heading: "Inter", sans-serif;
+  --font-logo: "Judson", serif;
+
+  --font-size-sm: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-xxl: 2.25rem;
+
+  --font-size-paragraph: var(--font-size-sm);
+  --font-size-h1: var(--font-size-xxl);
+  --font-size-h2: var(--font-size-xl);
+  --font-size-h3: var(--font-size-lg);
+  --font-size-h4: var(--font-size-md);
+
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
 }
 
-/* ---------------- COLORS SEMANTIC ----------------------
------------these are used inside the components-----*/
-:root {
-  --color-bg: var(--white);
-  --color-text: var(--black);
-
-  --color-primary: ;
-  --color-secondary: ;
-  --color-accent: ;
-
-  --color-success: var(--green);
-  --color-warning: var(--orange);
-  --color-error: var(--red);
-  --color-disabled: var(--grey);
-}
-
-/* ---------------- SPACING + LAYOUT ----------------------*/
-:root {
-  --space-xs: ;
-  --space-sm: ;
-  --space-md: ;
-  --space-lg: ;
-  --space-xl: ;
-
-  --width-xs: ;
-  --width-sm: ;
-  --width-md: ;
-  --width-lg: ;
-  --width-xl: ;
-}
-
-/* ---------------- BORDERS ----------------------*/
-:root {
-  --radius-sm: ;
-  --radius-md: ;
-  --radius-lg: ;
-
-  --border-width-sm: ;
-  --border-width-md: ;
-  --border-width-lg: ;
-}
-
-/* ---------------- SHADOWS ----------------------*/
-
-:root {
-  --shadow-sm: ;
-  --shadow-md: ;
-  --shadow-lg: ;
-}
-
-/* ---------------- TYPOGRAPHY ----------------------*/
-:root {
-  --font-body: ;
-  --font-heading: ;
-
-  --font-size-xs: ;
-  --font-size-sm: ;
-  --font-size-base: ;
-  --font-size-lg: ;
-  --font-size-xl: ;
-
-  --font-size-h1: ;
-  --font-size-h2: ;
-  --font-size-h3: ;
-  --font-size-h4: ;
-  --font-size-h5: ;
-  --font-size-h6: ;
-
-  --font-weight-thin: ;
-  --font-weight-normal: ;
-  --font-weight-medium: ;
-  --font-weight-bold: ;
-  --font-weight-black: ;
-
-  --line-height-small: ;
-  --line-height-medium: ;
-  --line-height-grand: ;
-
-  /* letter spacing? */
-}
-
-/* ---------------- THEME specific ----------------------*/
-
+/* ---------------- THEME ---------------- */
 :root {
   color-scheme: light dark;
 
-  --color-bg: #ffffff;
-  --background-text: #000000;
-
-  --color-border: #dcdcdc;
-
-  --color-accent: #2563eb;
-  --color-disabled: #9ca3af;
+  /* SEMANTIC COLORS (used in components) */
+  --color-bg: var(--color-white);
+  --color-text: var(--color-black);
+  --color-border: var(--color-black);
+  --color-accent: var(--color-orange);
+  --color-disabled: var(--color-gray);
+  --color-success: var(--color-green);
+  --color-warning: var(--color-orange);
+  --color-error: var(--color-red);
+  --color-header-text: var(--color-white);
+  --color-header-bg: var(--color-green);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #121212;
-    --background-text: #ffffff;
-
-    --color-border: #333;
-
-    --color-accent: #3b82f6;
-    --color-disabled: #555;
+    --color-bg: var(--color-black);
+    --color-text: var(--color-white);
+    --color-border: var(--color-white);
   }
 }

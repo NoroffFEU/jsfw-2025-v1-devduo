@@ -1,0 +1,8 @@
+.headerContainer {
+  display: block;
+  width: 100%;
+  height: 4.125rem;
+  background-color: var(--color-header-bg);
+  margin-bottom: 2rem;
+  color: var(--color-header-text);
+}
