@@ -21,7 +21,7 @@ h6 {
   font-family: var(--font-heading);
   fontweight:;
   line-height:;
-  color: var(--color-text);
+  color: var(--background-text);
 }
 
 h1 {

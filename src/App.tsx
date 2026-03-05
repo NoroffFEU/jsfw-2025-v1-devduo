@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "../components/layout/Layout.tsx";
-import CartPage from "../pages/CartPage.tsx";
-import CheckoutSuccessPage from "../pages/CheckoutSuccessPage.tsx";
-import ContactPage from "../pages/ContactPage.tsx";
-import HomePage from "../pages/HomePage.tsx";
-import PageNotFoundPage from "../pages/PageNotFoundPage.tsx";
-import ProductDetailPage from "../pages/ProductDetailPage.tsx";
+import Layout from "./components/layout/Layout.tsx";
+import CartPage from "./features/cart/CartPage.tsx";
+import CheckoutSuccessPage from "./features/checkout/CheckoutSuccessPage.tsx";
+import ContactPage from "./features/contact/ContactPage.tsx";
+import HomePage from "./features/home/HomePage.tsx";
+import PageNotFoundPage from "./features/notFound/PageNotFoundPage.tsx";
+import ProductDetailPage from "./features/products/ProductDetailPage.tsx";
 
 function App() {
   return (
