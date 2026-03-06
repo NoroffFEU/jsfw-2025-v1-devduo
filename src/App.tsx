@@ -6,6 +6,7 @@ import ContactPage from "./features/contact/ContactPage.tsx";
 import HomePage from "./features/home/HomePage.tsx";
 import PageNotFoundPage from "./features/notFound/PageNotFoundPage.tsx";
 import ProductDetailPage from "./features/products/ProductDetailPage.tsx";
+import ProductsPage from "./features/products/ProductsPage.tsx";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/products" element={<ProductsPage />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/checkout" element={<CheckoutSuccessPage />} />
           <Route path="/contact" element={<ContactPage />} />
