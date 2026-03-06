@@ -1,0 +1,9 @@
+.linksContainer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link {
+  font-size: var(--font-size-md);
+}
