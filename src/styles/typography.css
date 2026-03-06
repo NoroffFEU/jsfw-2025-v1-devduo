@@ -47,3 +47,7 @@ a {
 a:hover {
   filter: opacity(0.8);
 }
+
+a:active {
+  filter: opacity(0.5);
+}

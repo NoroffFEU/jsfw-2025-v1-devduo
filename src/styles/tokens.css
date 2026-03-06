@@ -13,10 +13,10 @@
   --space-lg: 4rem;
 
   /* WIDTH */
-  --width-sm: 450px;
-  --width-md: 650px;
-  --width-lg: 900px;
-  --width-xl: 1200px;
+  --width-sm: 500px;
+  --width-md: 800px;
+  --width-lg: 1100px;
+  --width-xl: 1400px;
 
   /* BORDERS */
   --border-radius: 0.3125rem;

@@ -3,7 +3,7 @@ import styles from "./NavLinks.module.css";
 
 const NavLinks = () => {
   return (
-    <div className={styles.linksContainer}>
+    <nav className={styles.linksContainer}>
       <Link to="/" className={styles.link}>
         Home
       </Link>
@@ -13,7 +13,7 @@ const NavLinks = () => {
       <Link to="/contact" className={styles.link}>
         Contact
       </Link>
-    </div>
+    </nav>
   );
 };
 

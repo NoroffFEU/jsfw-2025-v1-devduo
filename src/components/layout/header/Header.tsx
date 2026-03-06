@@ -1,10 +1,16 @@
 import styles from "./Header.module.css";
+import Logo from "./Logo";
+import NavLinks from "./NavLinks";
+import CartLink from "./CartLink";
 
 const Header = () => {
   return (
     <header className={styles.headerContainer}>
-      Header is coming here
-      <a href="asd">test</a>
+      <div className={styles.headerWrapper}>
+        <Logo />
+        <NavLinks />
+        <CartLink />
+      </div>
     </header>
   );
 };
