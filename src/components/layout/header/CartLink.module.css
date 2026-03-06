@@ -1,0 +1,8 @@
+.cartIconContainer {
+  display: block;
+}
+
+.cartLink svg {
+  height: 1.75rem;
+  width: 1.75rem;
+}
