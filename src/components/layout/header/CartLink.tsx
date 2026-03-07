@@ -3,7 +3,7 @@ import styles from "./CartLink.module.css";
 
 const CartLink = () => {
   return (
-    <div className={styles.cartIconContainer}>
+    <div>
       <Link to="/cart" className={styles.cartLink}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
