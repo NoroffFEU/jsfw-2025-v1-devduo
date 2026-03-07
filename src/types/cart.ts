@@ -1,5 +1,5 @@
 /* interface cart item/inpuit */
-//import type { Product } from "./api.ts";
+import type { Product } from "./api.ts";
 
 
 export interface CartItem {
@@ -12,6 +12,4 @@ export interface CartItem {
   imageAlt: string;
 }
 
-//export type CartItem {
-
-//}
+export type CartItemInput = Pick<Product, 'id' | 'title' | 'price' | 'discountedPrice' | 'image'> & { quantity?: number }
