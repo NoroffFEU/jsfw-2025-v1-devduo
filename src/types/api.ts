@@ -11,7 +11,7 @@ export interface ProductImage {
 export interface Review {
   id: string;
   username: string;
-  rating: BigInteger;
+  rating: number;
   description: string;
 }
 
