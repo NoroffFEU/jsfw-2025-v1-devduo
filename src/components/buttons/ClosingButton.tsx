@@ -1,8 +1,9 @@
+import type { ButtonClickTypes } from "../../types/button";
 import styles from "./ClosingButton.module.css";
 
-const ClosingButton = () => {
+const ClosingButton = ({ onClick }: ButtonClickTypes) => {
   return (
-    <button className={styles.closingButton}>
+    <button className={styles.closingButton} onClick={onClick}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

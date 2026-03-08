@@ -1,8 +1,9 @@
+import type { ButtonClickTypes } from "../../types/button";
 import styles from "./MenuButton.module.css";
 
-const MenuButton = () => {
+const MenuButton = ({ onClick }: ButtonClickTypes) => {
   return (
-    <button className={styles.buttonElement}>
+    <button className={styles.buttonElement} onClick={onClick}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

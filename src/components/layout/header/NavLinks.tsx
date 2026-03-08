@@ -1,18 +1,26 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "./NavLinks.module.css";
 
-const NavLinks = () => {
+{
+  /* Nav element gets two css classes, one base styling and one as props for HamburgerMenu component */
+}
+
+type ClassNameProps = {
+  className?: string;
+};
+
+const NavLinks = ({ className }: ClassNameProps) => {
   return (
-    <nav className={styles.linksContainer}>
-      <Link to="/" className={styles.link}>
+    <nav className={`${styles.linksContainer} ${className}`}>
+      <NavLink to="/" className={styles.link}>
         Home
-      </Link>
-      <Link to="/products" className={styles.link}>
+      </NavLink>
+      <NavLink to="/products" className={styles.link}>
         Products
-      </Link>
-      <Link to="/contact" className={styles.link}>
+      </NavLink>
+      <NavLink to="/contact" className={styles.link}>
         Contact
-      </Link>
+      </NavLink>
     </nav>
   );
 };

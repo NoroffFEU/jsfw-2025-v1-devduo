@@ -8,10 +8,12 @@ const Header = () => {
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerWrapper}>
-        <HamburgerMenu />
         <Logo />
         <NavLinks />
-        <CartLink />
+        <div className={styles.iconContainer}>
+          <CartLink />
+          <HamburgerMenu />
+        </div>
       </div>
     </header>
   );

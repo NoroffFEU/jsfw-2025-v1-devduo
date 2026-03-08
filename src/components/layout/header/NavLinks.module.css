@@ -7,3 +7,9 @@
 .link {
   font-size: var(--font-size-md);
 }
+
+@media (max-width: 800px) {
+  .linksContainer {
+    display: none;
+  }
+}
