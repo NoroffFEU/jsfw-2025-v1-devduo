@@ -1,4 +1,4 @@
-import type { ButtonClickTypes } from "../../types/button";
+import type { ButtonClickTypes } from "../../types/types";
 import styles from "./ClosingButton.module.css";
 
 const ClosingButton = ({ onClick }: ButtonClickTypes) => {

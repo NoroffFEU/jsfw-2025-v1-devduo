@@ -1,31 +1,27 @@
 import { NavLink } from "react-router-dom";
 import styles from "./NavLinks.module.css";
+import type { ClassNameProps, CloseMenuProp } from "../../../types/types";
 
-{
-  /* Nav element gets two css classes, one base styling and one as props for HamburgerMenu component */
-}
+// Merging the two types (& = merge), because types must describe ONE object containing all the props (React only sends one parameter).
+type NavLinksProps = ClassNameProps & CloseMenuProp;
 
-type ClassNameProps = {
-  className?: string;
-};
+const NavLinks = ({ className, closeMenu }: NavLinksProps) => {
+  // React Router passes an object with the property isActive (boolean).
+  // I did not destructure the prop in the helper function to understand better what was going on.
+  // If isActive is false only the link class gets implemented, and both if it's true.
+  const setLinkStyle = (props: { isActive: boolean }) => {
+    return props.isActive ? `${styles.link} ${styles.activeLink}` : styles.link;
+  };
 
-// React Router passes an object with the property isActive (boolean).
-// Did not destructure the prop (which is normal) to understand better whats going on in the helper function.
-// If isActive is false only the link class gets implemented, and both if it's true.
-const setLinkStyle = (props: { isActive: boolean }) => {
-  return props.isActive ? `${styles.link} ${styles.activeLink}` : styles.link;
-};
-
-const NavLinks = ({ className }: ClassNameProps) => {
   return (
     <nav className={`${styles.linksContainer} ${className}`}>
-      <NavLink to="/" className={setLinkStyle} end>
+      <NavLink to="/" className={setLinkStyle} onClick={closeMenu} end>
         Home
       </NavLink>
-      <NavLink to="/products" className={setLinkStyle}>
+      <NavLink to="/products" className={setLinkStyle} onClick={closeMenu}>
         Products
       </NavLink>
-      <NavLink to="/contact" className={setLinkStyle}>
+      <NavLink to="/contact" className={setLinkStyle} onClick={closeMenu}>
         Contact
       </NavLink>
     </nav>
