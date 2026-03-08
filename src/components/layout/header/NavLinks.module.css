@@ -8,6 +8,10 @@
   font-size: var(--font-size-md);
 }
 
+.activeLink {
+  color: var(--color-accent);
+}
+
 @media (max-width: 800px) {
   .linksContainer {
     display: none;
