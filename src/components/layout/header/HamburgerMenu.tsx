@@ -29,9 +29,9 @@ const HamburgerMenu = () => {
           <MenuButton onClick={toggleMenu} />
         )}
       </div>
-      <nav className={styles.navContainer}>
+      <div className={styles.navContainer}>
         <NavLinks className={`${baseClass} ${stateClass}`} closeMenu={closeMenu} />
-      </nav>
+      </div>
     </div>
   );
 };
