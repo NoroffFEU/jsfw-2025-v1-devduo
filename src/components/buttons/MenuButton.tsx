@@ -3,7 +3,10 @@ import styles from "./MenuButton.module.css";
 
 const MenuButton = ({ onClick }: ButtonClickTypes) => {
   return (
-    <button className={styles.buttonElement} onClick={onClick}>
+    <button
+      className={styles.buttonElement}
+      onClick={onClick}
+      aria-label="Open menu">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
