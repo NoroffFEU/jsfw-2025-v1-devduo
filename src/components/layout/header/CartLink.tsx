@@ -4,7 +4,7 @@ import styles from "./CartLink.module.css";
 const CartLink = () => {
   return (
     <div>
-      <Link to="/cart" className={styles.cartLink}>
+      <Link to="/cart" className={styles.cartLink} aria-label="Cart">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
