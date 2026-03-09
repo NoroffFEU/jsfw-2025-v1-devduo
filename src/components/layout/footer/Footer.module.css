@@ -19,18 +19,21 @@
   align-items: center;
 }
 
-.desktopFooter {
+.mobileFooter {
   display: none;
 }
 
+.desktopFooter {
+  display: flex;
+  justify-self: center;
+}
+
 @media (--width-sm) {
-  .mobileFooter {
-    display: none;
-    background-color: #fff;
-    color: #333;
-  }
   .desktopFooter {
-    display: flex;
-    justify-self: center;
+    display: none;
+  }
+
+  .mobileFooter {
+    display: block;
   }
 }
