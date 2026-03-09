@@ -20,9 +20,14 @@
   transform: translateX(100%);
 }
 
-@media (--width-md-up) {
+.menuContainer,
+.navContainer {
+  display: none;
+}
+
+@media (--width-md) {
   .menuContainer,
   .navContainer {
-    display: none;
+    display: flex;
   }
 }
