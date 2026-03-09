@@ -20,6 +20,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/notfound" element={<PageNotFoundPage />} />
           <Route path="/product/:id" element={<ProductDetailPage />} />
+          <Route path="/products" element={<ProductsPage />} />
         </Routes>
       </Layout>
     </BrowserRouter>
