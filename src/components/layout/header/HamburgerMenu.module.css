@@ -20,7 +20,7 @@
   transform: translateX(100%);
 }
 
-@media (min-width: 800px) {
+@media screen and (width >= 800px) {
   .menuContainer,
   .navContainer {
     display: none;
