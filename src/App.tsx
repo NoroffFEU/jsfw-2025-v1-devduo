@@ -6,6 +6,7 @@ import ContactPage from "./features/contact/ContactPage.tsx";
 import HomePage from "./features/home/HomePage.tsx";
 import PageNotFoundPage from "./features/notFound/PageNotFoundPage.tsx";
 import ProductDetailPage from "./features/products/ProductDetailPage.tsx";
+import ProductsPage from "./features/products/ProductsPage.tsx";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/notfound" element={<PageNotFoundPage />} />
           <Route path="/product/:id" element={<ProductDetailPage />} />
+          <Route path="/products" element={<ProductsPage />} />
         </Routes>
       </Layout>
     </BrowserRouter>
