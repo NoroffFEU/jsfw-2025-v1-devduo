@@ -1,6 +1,9 @@
-// products page - list of all products
 const ProductsPage = () => {
-  return <main>List of all Products page</main>;
+  return (
+    <>
+      <h1>All Products</h1>
+    </>
+  );
 };
 
 export default ProductsPage;

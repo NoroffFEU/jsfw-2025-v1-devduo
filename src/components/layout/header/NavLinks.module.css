@@ -1,0 +1,19 @@
+.linksContainer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link {
+  font-size: var(--font-size-md);
+}
+
+.activeLink {
+  color: var(--color-accent);
+}
+
+@media (--width-md-down) {
+  .linksContainer {
+    display: none;
+  }
+}
