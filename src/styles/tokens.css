@@ -1,3 +1,8 @@
+@custom-media --width-sm (min-width: 500px);
+@custom-media --width-md (min-width: 800px);
+@custom-media --width-lg (min-width: 1100px);
+@custom-media --width-xl (min-width: 1400px);
+
 :root {
   /* COLORS - PRIMITIVE (not used directly in components) */
   --color-black: #131313;
@@ -77,6 +82,8 @@
   --color-error: var(--color-red);
   --color-header-text: var(--color-white);
   --color-header-bg: var(--color-green);
+  --color-footer-text: var(--color-white);
+  --color-footer-bg: var(--color-green);
 }
 
 @media (prefers-color-scheme: dark) {
