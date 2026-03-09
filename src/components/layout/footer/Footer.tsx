@@ -18,7 +18,7 @@ const Footer = () => {
             <small>Home</small>
           </Link>
           <Link to="/products" className={styles.footerLinks}>
-            <ShoppingBagIcon className={styles.icon}></ShoppingBagIcon>
+            <ShoppingBagIcon className={styles.icon} />
             <small>Products</small>
           </Link>
           <Link to="/cart" className={styles.footerLinks}>
