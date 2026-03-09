@@ -12,7 +12,7 @@
   color: var(--color-accent);
 }
 
-@media screen and (width < 800px) {
+@media (--width-md-down) {
   .linksContainer {
     display: none;
   }

@@ -18,7 +18,7 @@
   gap: 2rem;
 }
 
-@media screen and (width >= 800px) {
+@media (--width-md-up) {
   .iconContainer {
     gap: 0;
   }

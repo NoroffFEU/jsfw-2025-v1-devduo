@@ -20,7 +20,7 @@
   transform: translateX(100%);
 }
 
-@media screen and (width >= 800px) {
+@media (--width-md-up) {
   .menuContainer,
   .navContainer {
     display: none;

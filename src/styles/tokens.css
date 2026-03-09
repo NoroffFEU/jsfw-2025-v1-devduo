@@ -12,7 +12,7 @@
   --space-md: 2rem;
   --space-lg: 4rem;
 
-  /* WIDTH */
+  /* WIDTH  - If changed, make sure to change the @custom-media values also! */
   --width-sm: 500px;
   --width-md: 800px;
   --width-lg: 1100px;
@@ -45,6 +45,17 @@
   --font-weight-normal: 400;
   --font-weight-bold: 700;
 }
+
+/* ----------- Variables for PostCSS Custom Media ----------- */
+@custom-media --width-sm-up (min-width: 500px);
+@custom-media --width-md-up (min-width: 800px);
+@custom-media --width-lg-up (min-width: 1100px);
+@custom-media --width-xl-up (min-width: 1400px);
+
+@custom-media --width-sm-down (max-width: 499px);
+@custom-media --width-md-down (max-width: 799px);
+@custom-media --width-lg-down (max-width: 1099px);
+@custom-media --width-xl-down (max-width: 1399px);
 
 /* ---------------- THEME ---------------- */
 :root {
