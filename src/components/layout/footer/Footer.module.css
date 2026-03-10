@@ -1,5 +1,5 @@
 .footerContainer {
-  padding: 1rem;
+  padding: 1rem 0;
   width: 100%;
   color: var(--color-footer-text);
   background-color: var(--color-footer-bg);

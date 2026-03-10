@@ -23,3 +23,9 @@
     gap: 2rem;
   }
 }
+
+@media (--width-sm) {
+  .headerWrapper {
+    padding: 1rem 1rem;
+  }
+}
