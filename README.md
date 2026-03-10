@@ -1,8 +1,10 @@
+# Website under construction, check back later for updates!
+
+---
+
 # HelTech Online Shop
 
 School project built with React, TypeScript, and Vite.
-
-# Website under construction, check back later for updates!
 
 ## About
 
