@@ -9,3 +9,8 @@ export type ClassNameProps = {
 export type CloseMenuProp = {
   closeMenu?: () => void;
 };
+
+export type Discount = {
+  defaultPrice: number;
+  discountedPrice: number;
+};
