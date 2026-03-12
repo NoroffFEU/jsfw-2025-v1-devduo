@@ -18,8 +18,8 @@ const imageAltText = "";
 // Stores the discount percentage value in a new variable for better readability
 const discountValue = calculateDiscount({ defaultPrice, discountedPrice });
 
+// If discount price is less than default it displays both prices, if not, only the default.
 const displayedPrice =
-  // If discount price is less than default it displays both prices, if not, only the default.
   discountedPrice < defaultPrice ? (
     <>
       <p className={styles.discountPrice}>${discountedPrice}</p>
