@@ -68,14 +68,14 @@
   height: 100%;
 }
 
-.priceContainer p {
+.priceContainer .discountPrice {
   align-self: flex-end;
   color: var(--color-accent);
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
 }
 
-.priceContainer p:last-of-type {
+.priceContainer .defaultPrice {
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-light);
   text-decoration: line-through;

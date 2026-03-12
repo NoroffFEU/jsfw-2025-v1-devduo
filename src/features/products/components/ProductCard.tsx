@@ -15,7 +15,19 @@ const rating: number = 4.5;
 const imageAltText = "";
 // ------------------------------------
 
+// Stores the discount percentage value in a new variable for better readability
 const discountValue = calculateDiscount({ defaultPrice, discountedPrice });
+
+const displayedPrice =
+  // If discount price is less than default it displays both prices, if not, only the default.
+  discountedPrice < defaultPrice ? (
+    <>
+      <p className={styles.discountPrice}>${discountedPrice}</p>
+      <p className={styles.defaultPrice}>${defaultPrice}</p>
+    </>
+  ) : (
+    <p className={styles.discountPrice}>${defaultPrice}</p>
+  );
 
 const ProductCard = () => {
   return (
@@ -35,10 +47,7 @@ const ProductCard = () => {
             </span>
             {rating}
           </p>
-          <div className={styles.priceContainer}>
-            <p>${discountedPrice}</p>
-            <p>${defaultPrice}</p>
-          </div>
+          <div className={styles.priceContainer}>{displayedPrice}</div>
         </div>
       </article>
     </Link>
