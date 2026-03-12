@@ -71,7 +71,7 @@
   --color-header-bg: var(--color-green);
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
     --color-bg: var(--color-black);
     --color-text: var(--color-white);
