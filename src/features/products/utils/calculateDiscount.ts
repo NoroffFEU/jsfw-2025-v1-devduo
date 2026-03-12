@@ -3,7 +3,7 @@ import type { Discount } from "../../../types/types";
 export const calculateDiscount = ({ defaultPrice, discountedPrice }: Discount) => {
   if (defaultPrice <= 0 || discountedPrice > defaultPrice) {
     console.warn(
-      `${defaultPrice} is less than 0, or ${discountedPrice} is higher than ${defaultPrice}`,
+      `Mismatch between price values: Default price = ${defaultPrice}, Discount price = ${discountedPrice}`,
     );
 
     return 0;
