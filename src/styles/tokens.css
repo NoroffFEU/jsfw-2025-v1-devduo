@@ -44,6 +44,7 @@
   --font-size-h3: var(--font-size-lg);
   --font-size-h4: var(--font-size-md);
 
+  --font-weight-light: 200;
   --font-weight-normal: 400;
   --font-weight-bold: 700;
 }
