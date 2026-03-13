@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import productImage from "../../../assets/images/test-image.webp";
 import placeholderImage from "../../../assets/images/placeholder.webp";
 import styles from "./ProductCard.module.css";
 import { StarIcon } from "@heroicons/react/24/solid";
@@ -13,6 +12,7 @@ const discountedPrice: number = 450;
 const defaultPrice: number = 499;
 const rating: number = 4.5;
 const imageAltText = "";
+const productImage = "";
 // ------------------------------------
 
 // Stores the discount percentage value in a new variable for better readability
@@ -31,14 +31,14 @@ const displayedPrice =
 
 const ProductCard = () => {
   return (
-    <Link to="../ProductDetailPage" className={styles.productLink}>
+    <Link to="../product/4" className={styles.productLink}>
       <article className={styles.productCardContainer}>
         <img
           className={styles.productImage}
           src={productImage ? productImage : placeholderImage}
           alt={imageAltText ? imageAltText : "Product image"}
         />
-        {discountValue ? <DiscountBadge discount={discountValue} /> : ""}
+        {discountValue ? <DiscountBadge discount={discountValue} /> : null}
         <div className={styles.infoContainer}>
           <h3>{productName}</h3>
           <p className={styles.ratingElement}>

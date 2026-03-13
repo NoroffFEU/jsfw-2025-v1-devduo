@@ -1,12 +1,12 @@
 .productLink {
   display: inline-block;
   max-width: fit-content;
+  transition: all 0.3s ease-in-out;
 }
 
 .productLink:hover {
-  transform: scale(0.99);
-  filter: opacity(0.95);
-  transition: all 0.3s ease-in-out;
+  transform: scale(0.98);
+  filter: opacity(1);
 }
 
 /* --- Image section --- */
@@ -83,10 +83,4 @@
   color: var(--color-header-text);
   align-self: flex-end;
   margin-bottom: 0.2rem;
-}
-
-@media (--width-sm) {
-  .productCardContainer {
-    max-height: auto;
-  }
 }
