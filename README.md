@@ -1,4 +1,4 @@
-** Website under construction, check back later for updates! ** 
+**Website under construction, check back later for updates!** 
 
 ---
 
