@@ -8,7 +8,13 @@
   max-width: var(--width-xl);
   margin: 0 auto;
   width: 100%;
-  padding: 3rem 2rem;
+  padding: 6rem 2rem;
+}
+
+@media (--width-md) {
+  .mainContainer {
+    padding: 3rem 2rem;
+  }
 }
 
 @media (--width-sm) {
