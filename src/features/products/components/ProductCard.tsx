@@ -37,6 +37,7 @@ const ProductCard = () => {
           className={styles.productImage}
           src={productImage ? productImage : placeholderImage}
           alt={imageAltText ? imageAltText : "Product image"}
+          loading="lazy"
         />
         {discountValue ? <DiscountBadge discount={discountValue} /> : null}
         <div className={styles.infoContainer}>
