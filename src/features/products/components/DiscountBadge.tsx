@@ -6,8 +6,9 @@ type DiscountProp = {
 
 const DiscountBadge = ({ discount }: DiscountProp) => {
   return (
-    <div className={styles.discountWrapper} aria-label="Discount in percentage">
-      {`-${discount}%`}
+    <div className={styles.discountWrapper}>
+      <span aria-label={`price is ${discount}`}></span>
+      <span>{`-${discount}%`}</span>
     </div>
   );
 };
