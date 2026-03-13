@@ -1,12 +1,13 @@
 import type { Discount } from "../../../types/types";
 
-export const calculateDiscount = ({ defaultPrice, discountedPrice }: Discount) => {
+// function returns null if the arguments matches
+// function can return a number or null
+export const calculateDiscount = ({
+  defaultPrice,
+  discountedPrice,
+}: Discount): number | null => {
   if (defaultPrice <= 0 || discountedPrice > defaultPrice) {
-    console.warn(
-      `Mismatch between price values: Default price = ${defaultPrice}, Discount price = ${discountedPrice}`,
-    );
-
-    return 0;
+    return null;
   }
 
   const discountAmount = defaultPrice - discountedPrice;
