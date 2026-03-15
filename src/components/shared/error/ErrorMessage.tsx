@@ -1,7 +1,10 @@
 import styles from "./ErrorMessage.module.css";
 
-const ErrorMessage = () => {
-  const message = "testing";
+type ErrorMessageProps = {
+  message: string;
+};
+
+const ErrorMessage = ({ message }: ErrorMessageProps) => {
   return (
     <>
       <div className={styles.wrapper}>

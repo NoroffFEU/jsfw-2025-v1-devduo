@@ -1,7 +1,13 @@
 .wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 4rem 2rem;
+  border-radius: var(--border-radius);
   background-color: var(--color-error);
 }
 
 .message {
-  font-size: var(--font-size-lg);
+  color: var(--color-header-text);
+  font-size: var(--font-size-xl);
 }
