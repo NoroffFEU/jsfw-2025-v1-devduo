@@ -1,7 +1,8 @@
 .productLink {
   display: inline-block;
   transition: all 0.3s ease-in-out;
-  width: 100%;
+  /* width: 100%; */
+  width: fit-content;
 }
 
 .productLink:hover {
