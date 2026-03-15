@@ -14,3 +14,18 @@ export type Discount = {
   defaultPrice: number;
   discountedPrice: number;
 };
+
+export type DiscountPriceType = {
+  discountedPrice: number;
+  defaultPrice: number;
+};
+
+export type ProductType = {
+  productId: string;
+  productName: string;
+  productImage: string;
+  imageAltText: string;
+  defaultPrice: number;
+  discountedPrice: number;
+  rating: number;
+};
