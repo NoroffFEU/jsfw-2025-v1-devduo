@@ -4,10 +4,15 @@ import styles from "./ErrorMessage.module.css";
 /**
  * Displays an error message inside a styled wrapper.
  *
- * @component
- * @param {ErrorMessageProps} props - The props for the ErrorMessage component.
- * @param {string} props.message - The error message to display.
- * @returns {JSX.Element} The rendered error message component.
+ *
+ * Example:
+ * ```tsx
+ * <ErrorMessage message="Something went wrong. Please try again." />
+ * ```
+ * Or any other returned errors (string)
+ * ```tsx
+ * <ErrorMessage message={error} />
+ * ```
  */
 
 const ErrorMessage = ({ message }: ErrorMessageProps) => {

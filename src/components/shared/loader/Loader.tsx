@@ -2,13 +2,9 @@ import styles from "./Loader.module.css";
 
 /**
  * Displays the loader component animation.
- *
- * @component
  * @example
  * // Usage
  * <Loader />
- *
- * @returns {JSX.Element} The loader animation.
  */
 
 const Loader = () => {
