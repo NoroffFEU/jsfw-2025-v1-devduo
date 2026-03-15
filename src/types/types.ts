@@ -10,6 +10,10 @@ export type CloseMenuProp = {
   closeMenu?: () => void;
 };
 
+export type ErrorMessageProps = {
+  message: string;
+};
+
 // --- Product card component ---
 
 export type Discount = {
