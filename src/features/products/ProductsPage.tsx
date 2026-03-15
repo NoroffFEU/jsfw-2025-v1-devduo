@@ -18,7 +18,12 @@ const ProductsPage = () => {
         const data = await fetchProducts();
         setProducts(data);
       } catch (err) {
-        setError("Fetch request failed");
+        setError(
+          err instanceof Error
+            ? `${err.message}. Try again later`
+            : `Something went wrong. Try again later`,
+        );
+
         console.error(err, "Fetch request failed");
       } finally {
         setLoading(false);
@@ -39,7 +44,7 @@ const ProductsPage = () => {
         {/* Grid for all products here */}
       </section>
       <section className={styles.productsGridContainer}>
-        {error && <ErrorMessage />}
+        {error && <ErrorMessage message={error} />}
         {loading && <Loader />}
         {itemsArray?.map((product) => (
           <ProductCard
