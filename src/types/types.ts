@@ -10,6 +10,8 @@ export type CloseMenuProp = {
   closeMenu?: () => void;
 };
 
+// --- Product card component ---
+
 export type Discount = {
   defaultPrice: number;
   discountedPrice: number;
@@ -27,5 +29,31 @@ export type ProductType = {
   imageAltText: string;
   defaultPrice: number;
   discountedPrice: number;
-  rating: number;
+  rating?: number;
 };
+
+// --- Products page
+
+export type Review = {
+  description?: string;
+  id?: string;
+  rating?: number;
+  username?: string;
+};
+
+export interface ProductAPIData {
+  id: string;
+  title: string;
+  image: {
+    url: string;
+    alt: string;
+  };
+  price: number;
+  reviews: Array<Review>;
+  discountedPrice: number;
+}
+
+export interface APIResponse {
+  data: ProductAPIData[];
+  meta: object;
+}

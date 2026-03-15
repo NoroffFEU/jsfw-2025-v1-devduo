@@ -1,38 +1,30 @@
+import type { APIResponse } from "../../types/types";
 import ProductCard from "./components/ProductCard";
 import styles from "./ProductsPage.module.css";
 import { useEffect, useState } from "react";
-interface APIResponse {
-  data: Product[];
-  meta: object;
-}
-
-type Review = {
-  description: string;
-  id: string;
-  rating: number;
-  username: string;
-};
-
-interface Product {
-  id: string;
-  title: string;
-  image: {
-    url: string;
-    alt: string;
-  };
-  price: number;
-  reviews: Array<Review>;
-  discountedPrice: number;
-  rating: number;
-}
+import { fetchProducts } from "./services/fetchProducts";
+import ErrorMessage from "../../components/shared/error/ErrorMessage";
+import Loader from "../../components/shared/loader/Loader";
 
 const ProductsPage = () => {
   const [products, setProducts] = useState<APIResponse | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch("https://v2.api.noroff.dev/online-shop/")
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
+    const loadProducts = async () => {
+      try {
+        setLoading(true);
+        const data = await fetchProducts();
+        setProducts(data);
+      } catch (err) {
+        setError("Fetch request failed");
+        console.error(err, "Fetch request failed");
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadProducts();
   }, []);
 
   const itemsArray = products?.data;
@@ -47,16 +39,18 @@ const ProductsPage = () => {
         {/* Grid for all products here */}
       </section>
       <section className={styles.productsGridContainer}>
+        {error && <ErrorMessage />}
+        {loading && <Loader />}
         {itemsArray?.map((product) => (
           <ProductCard
-            key={product?.id}
-            productId={product?.id}
-            productName={product?.title}
-            productImage={product?.image?.url}
-            imageAltText={product?.image?.alt}
-            defaultPrice={product?.price}
-            discountedPrice={product?.discountedPrice}
-            rating={product?.reviews[0]?.rating}
+            key={product.id}
+            productId={product.id}
+            productName={product.title}
+            productImage={product.image?.url}
+            imageAltText={product.image?.alt}
+            defaultPrice={product.price}
+            discountedPrice={product.discountedPrice}
+            rating={product.reviews[0]?.rating}
           />
         ))}
       </section>
