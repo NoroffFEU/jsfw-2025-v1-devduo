@@ -4,34 +4,26 @@ import styles from "./ProductCard.module.css";
 import { StarIcon } from "@heroicons/react/24/solid";
 import DiscountBadge from "./DiscountBadge";
 import { calculateDiscount } from "../utils/calculateDiscount";
+import { isDiscounted } from "../utils/isDiscounted";
+import type { ProductType } from "../../../types/types";
 
-// THESE CONSTANTS/VALUES WILL GET REPLACED WITH API DATA.
-// DELETE BEFORE DEPLOYMENT
-const productName: string = "Awesome title";
-const discountedPrice: number = 450;
-const defaultPrice: number = 499;
-const rating: number = 4.5;
-const imageAltText = "";
-const productImage = "";
-// ------------------------------------
+const ProductCard = ({
+  productId,
+  productName,
+  productImage,
+  imageAltText,
+  defaultPrice,
+  discountedPrice,
+  rating,
+}: ProductType) => {
+  // Stores the discount percentage value in a new variable for better readability
+  const discountValue = calculateDiscount({ defaultPrice, discountedPrice });
 
-// Stores the discount percentage value in a new variable for better readability
-const discountValue = calculateDiscount({ defaultPrice, discountedPrice });
+  // Returns as true or false
+  const hasDiscount = isDiscounted({ defaultPrice, discountedPrice });
 
-// If discount price is less than default it displays both prices, if not, only the default.
-const displayedPrice =
-  discountedPrice < defaultPrice ? (
-    <>
-      <p className={styles.discountPrice}>${discountedPrice}</p>
-      <p className={styles.defaultPrice}>${defaultPrice}</p>
-    </>
-  ) : (
-    <p className={styles.discountPrice}>${defaultPrice}</p>
-  );
-
-const ProductCard = () => {
   return (
-    <Link to="../product/4" className={styles.productLink}>
+    <Link to={`../ProductDetailPage/${productId}`} className={styles.productLink}>
       <article className={styles.productCardContainer}>
         <img
           className={styles.productImage}
@@ -42,13 +34,24 @@ const ProductCard = () => {
         {discountValue ? <DiscountBadge discount={discountValue} /> : null}
         <div className={styles.infoContainer}>
           <h3>{productName}</h3>
-          <p className={styles.ratingElement}>
-            <span className={styles.starIcon}>
-              <StarIcon />
-            </span>
-            {rating}
-          </p>
-          <div className={styles.priceContainer}>{displayedPrice}</div>
+          {rating && (
+            <p className={styles.ratingElement}>
+              <span className={styles.starIcon}>
+                <StarIcon />
+              </span>
+              {rating}
+            </p>
+          )}
+          <div className={styles.priceContainer}>
+            {hasDiscount ? (
+              <>
+                <p className={styles.discountPrice}>{discountedPrice}</p>
+                <p className={styles.defaultPrice}>{defaultPrice}</p>
+              </>
+            ) : (
+              <p className={styles.discountPrice}>{defaultPrice}</p>
+            )}
+          </div>
         </div>
       </article>
     </Link>
