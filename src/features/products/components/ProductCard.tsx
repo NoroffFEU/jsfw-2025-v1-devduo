@@ -34,7 +34,8 @@ const ProductCard = ({
         {discountValue ? <DiscountBadge discount={discountValue} /> : null}
         <div className={styles.infoContainer}>
           <h3>{productName}</h3>
-          {rating && (
+          {/*  */}
+          {rating != null && (
             <p className={styles.ratingElement}>
               <span className={styles.starIcon}>
                 <StarIcon />
