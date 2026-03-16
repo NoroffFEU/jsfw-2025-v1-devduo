@@ -8,7 +8,7 @@ import Loader from "../../components/shared/loader/Loader";
 
 const ProductsPage = () => {
   const [products, setProducts] = useState<APIResponse | null>(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -53,7 +53,7 @@ const ProductsPage = () => {
             imageAltText={product.image?.alt}
             defaultPrice={product.price}
             discountedPrice={product.discountedPrice}
-            rating={product.reviews[0]?.rating}
+            rating={product?.rating}
           />
         ))}
       </section>
