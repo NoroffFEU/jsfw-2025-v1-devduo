@@ -1,0 +1,14 @@
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.logoName {
+  font: var(--font-size-xl) var(--font-logo);
+}
+
+.logoImage {
+  height: 3.125rem;
+  width: 3.125rem;
+}
