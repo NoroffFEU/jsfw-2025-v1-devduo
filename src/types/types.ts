@@ -54,3 +54,9 @@ export interface APIResponse {
   data: ProductAPIData[];
   meta: object;
 }
+
+export type ProductGridProps = {
+  error: string | null;
+  loading: boolean;
+  productsList?: Array<ProductAPIData>;
+};
