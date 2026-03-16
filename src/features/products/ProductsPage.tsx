@@ -34,8 +34,6 @@ const ProductsPage = () => {
 
   const itemsArray = products?.data;
 
-  console.log(itemsArray);
-
   return (
     <>
       <section>
