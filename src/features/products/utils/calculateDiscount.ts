@@ -1,7 +1,15 @@
 import type { Discount } from "../../../types/types";
 
-// function returns null if the arguments matches
-// function can return a number or null
+/**
+ * Calculates the discount percentage based on the default and discounted prices.
+ *
+ * @param {Discount} params - The discount parameters.
+ * @param {number} params.defaultPrice - The original price before discount.
+ * @param {number} params.discountedPrice - The price after discount.
+ * @returns {number | null} The discount percentage rounded to the nearest integer,
+ * or null if the input is invalid (e.g., defaultPrice <= 0 or discountedPrice > defaultPrice).
+ */
+
 export const calculateDiscount = ({
   defaultPrice,
   discountedPrice,
