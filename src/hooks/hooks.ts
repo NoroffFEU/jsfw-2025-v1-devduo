@@ -1,1 +1,1 @@
-/* Shared/common hooks */
+/* hooks folder for shared/common hooks */

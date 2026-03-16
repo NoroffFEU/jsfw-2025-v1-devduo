@@ -1,19 +1,6 @@
 /* possible add for box-sizing, display for img/pictures/svg, inherit props, overflow-wrap etc */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  height: 100%;
-}
-button {
-  background-color: transparent;
-  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width:;
 }
