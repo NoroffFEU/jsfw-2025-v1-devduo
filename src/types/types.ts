@@ -55,6 +55,7 @@ export interface ProductAPIData {
   price: number;
   reviews: Array<Review>;
   discountedPrice: number;
+  rating: number;
 }
 
 export interface APIResponse {
