@@ -32,18 +32,11 @@ export type ProductType = {
   productImage: string;
   imageAltText: string;
   defaultPrice: number;
-  discountedPrice: number;
+  discountedPrice?: number;
   rating?: number;
 };
 
-// --- Products page
-
-export type Review = {
-  description?: string;
-  id?: string;
-  rating?: number;
-  username?: string;
-};
+// --- Product Grid component ---
 
 export interface ProductAPIData {
   id: string;
@@ -53,8 +46,7 @@ export interface ProductAPIData {
     alt: string;
   };
   price: number;
-  reviews: Array<Review>;
-  discountedPrice: number;
+  discountedPrice?: number;
   rating: number;
 }
 

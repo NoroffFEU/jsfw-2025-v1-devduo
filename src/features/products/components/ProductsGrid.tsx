@@ -43,11 +43,11 @@ const ProductsGrid = () => {
           key={product.id}
           productId={product.id}
           productName={product.title}
-          productImage={product.image?.url}
-          imageAltText={product.image?.alt}
+          productImage={product.image.url}
+          imageAltText={product.image.alt}
           defaultPrice={product.price}
           discountedPrice={product.discountedPrice}
-          rating={product?.rating}
+          rating={product.rating}
         />
       ))}
     </section>
