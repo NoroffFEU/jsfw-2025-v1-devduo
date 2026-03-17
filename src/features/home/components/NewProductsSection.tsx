@@ -5,6 +5,27 @@ import { useEffect, useState } from "react";
 import type { APIResponse } from "../../../types/types";
 import styles from "./NewProductsSection.module.css";
 
+/**
+ * NewProductsSection component that displays the last 4 products from the API in a slider.
+ *
+ * Fetches product data on component mount. Also handles loading and error states.
+ *
+ * @component
+ * @returns {React.ReactElement} A section containing the new products grid with heading and a link to view all products.
+ *
+ * @example
+ * // Basic usage in a page or layout
+ * import NewProductsSection from './NewProductsSection';
+ *
+ * export default function HomePage() {
+ *   return (
+ *     <main>
+ *       <NewProductsSection />
+ *     </main>
+ *   );
+ * }
+ */
+
 const NewProductsSection = () => {
   const [products, setProducts] = useState<APIResponse | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
