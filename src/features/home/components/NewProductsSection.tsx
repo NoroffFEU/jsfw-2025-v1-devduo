@@ -6,7 +6,7 @@ import type { APIResponse } from "../../../types/types";
 import styles from "./NewProductsSection.module.css";
 
 /**
- * NewProductsSection component that displays the last 4 products from the API in a slider.
+ * NewProductsSection component that displays the first 4 products from the API in a slider.
  *
  * Fetches product data on component mount. Also handles loading and error states.
  *
