@@ -59,7 +59,10 @@ const NewProductsSection = () => {
         <h2>New products</h2>
         <div>
           <Link to="/products">
-            View all<span className="material-symbols-outlined">arrow_forward</span>
+            View all
+            <span aria-hidden="true" className="material-symbols-outlined">
+              arrow_forward
+            </span>
           </Link>
         </div>
       </div>

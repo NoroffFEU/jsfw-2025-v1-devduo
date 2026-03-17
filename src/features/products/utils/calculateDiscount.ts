@@ -14,6 +14,9 @@ export const calculateDiscount = ({
   defaultPrice,
   discountedPrice,
 }: Discount): number | null => {
+  if (discountedPrice === undefined) {
+    return null;
+  }
   if (defaultPrice <= 0 || discountedPrice > defaultPrice) {
     return null;
   }

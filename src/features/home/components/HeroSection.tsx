@@ -3,7 +3,7 @@ import styles from "./HeroSection.module.css";
 const HeroSection = () => {
   return (
     <section className={styles.heroWrapper}>
-      <h1 className="color-text">Welcome to HelTec</h1>
+      <h1>Welcome to HelTec</h1>
       <p>
         Discover amazing products at great prices. Quality and style delivered to your
         door.

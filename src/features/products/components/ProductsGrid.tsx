@@ -4,7 +4,12 @@ import ErrorMessage from "../../../components/shared/error/ErrorMessage";
 import Loader from "../../../components/shared/loader/Loader";
 import type { ProductGridProps } from "../../../types/types";
 
-const ProductsGrid = ({ error, loading, productsList, className }: ProductGridProps) => {
+const ProductsGrid = ({
+  error,
+  loading,
+  productsList,
+  className = "",
+}: ProductGridProps) => {
   // Only display error and loader if they are true
   // These statements prevents both from being displayed at the same time, rather than having them inside the section element.
   if (error) return <ErrorMessage message={error} />;

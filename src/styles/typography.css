@@ -36,7 +36,7 @@ h4 {
 
 p {
   text-wrap: pretty;
-  letter-spacing: 1.5%;
+  letter-spacing: 0.015rem;
 }
 
 /*-----------------------Button and Links-----------------------*/

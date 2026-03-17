@@ -1,10 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./PrimaryButton.module.css";
-
-type PrimaryButtonProps = {
-  path: string;
-  text: string;
-};
+import type { PrimaryButtonProps } from "../../types/types";
 
 /**
  * A primary button component that navigates to a specified path.
@@ -19,7 +15,7 @@ type PrimaryButtonProps = {
 
 const PrimaryButton = ({ path, text }: PrimaryButtonProps) => {
   return (
-    <Link to={path} className={styles.PrimaryButton}>
+    <Link to={path} className={styles.primaryButton}>
       {text}
     </Link>
   );

@@ -59,5 +59,11 @@ export type ProductGridProps = {
   error: string | null;
   loading: boolean;
   productsList?: Array<ProductAPIData>;
-  className: string;
+  className?: string;
+};
+
+// --- PrimaryButton ---
+export type PrimaryButtonProps = {
+  path: string;
+  text: string;
 };
