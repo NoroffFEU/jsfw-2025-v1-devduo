@@ -1,0 +1,29 @@
+.productOuterContainer {
+  max-width: var(--width-xl);
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.productHeadingWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 2rem 0;
+}
+
+.productHeadingWrapper a {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.productWrapper {
+  max-width: var(--width-xl);
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+  overflow-x: scroll;
+  padding: 0 0 2rem 0;
+  scrollbar-width: none;
+}
