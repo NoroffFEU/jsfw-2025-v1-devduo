@@ -34,7 +34,7 @@ const ProductsPage = () => {
 
   return (
     <div className={styles.pageContainer}>
-      <section className={styles.productHeadlineWrapper}>
+      <section>
         <h1 className={styles.productHeadline}>Our Products</h1>
       </section>
       <section>

@@ -1,9 +1,6 @@
 .pageContainer {
   max-width: var(--width-xl);
-  margin: 0 auto;
-}
-
-.productHeadlineWrapper {
+  margin: 0 auto 6rem;
 }
 
 .productHeadline {
