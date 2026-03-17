@@ -6,7 +6,7 @@ import { fetchProducts } from "./services/fetchProducts";
 
 const ProductsPage = () => {
   const [products, setProducts] = useState<APIResponse | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -36,7 +36,14 @@ const ProductsPage = () => {
       <section>
         <h1 className={styles.productHeadline}>Our Products</h1>
       </section>
-      <ProductsGrid error={error} loading={loading} productsList={productsList} />
+      <section>
+        <ProductsGrid
+          error={error}
+          loading={loading}
+          productsList={productsList}
+          className=""
+        />
+      </section>
     </>
   );
 };

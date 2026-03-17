@@ -4,14 +4,14 @@ import ErrorMessage from "../../../components/shared/error/ErrorMessage";
 import Loader from "../../../components/shared/loader/Loader";
 import type { ProductGridProps } from "../../../types/types";
 
-const ProductsGrid = ({ error, loading, productsList }: ProductGridProps) => {
+const ProductsGrid = ({ error, loading, productsList, className }: ProductGridProps) => {
   // Only display error and loader if they are true
   // These statements prevents both from being displayed at the same time, rather than having them inside the section element.
   if (error) return <ErrorMessage message={error} />;
   if (loading) return <Loader />;
 
   return (
-    <section className={styles.productsGridContainer}>
+    <div className={`${styles.productsGridContainer} ${className}`}>
       {productsList?.map((product) => (
         <ProductCard
           key={product.id}
@@ -24,7 +24,7 @@ const ProductsGrid = ({ error, loading, productsList }: ProductGridProps) => {
           rating={product.rating}
         />
       ))}
-    </section>
+    </div>
   );
 };
 
