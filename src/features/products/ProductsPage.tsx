@@ -31,9 +31,10 @@ const ProductsPage = () => {
   }, []);
 
   const productsList = products?.data;
+
   return (
-    <>
-      <section>
+    <div className={styles.pageContainer}>
+      <section className={styles.productHeadlineWrapper}>
         <h1 className={styles.productHeadline}>Our Products</h1>
       </section>
       <section>
@@ -41,10 +42,10 @@ const ProductsPage = () => {
           error={error}
           loading={loading}
           productsList={productsList}
-          className=""
+          className={styles.productsGridWrapper}
         />
       </section>
-    </>
+    </div>
   );
 };
 
