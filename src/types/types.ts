@@ -18,11 +18,11 @@ export type ErrorMessageProps = {
 
 export type Discount = {
   defaultPrice: number;
-  discountedPrice: number;
+  discountedPrice?: number;
 };
 
 export type DiscountPriceType = {
-  discountedPrice: number;
+  discountedPrice?: number;
   defaultPrice: number;
 };
 
@@ -59,4 +59,11 @@ export type ProductGridProps = {
   error: string | null;
   loading: boolean;
   productsList?: Array<ProductAPIData>;
+  className?: string;
+};
+
+// --- PrimaryButton ---
+export type PrimaryButtonProps = {
+  path: string;
+  text: string;
 };

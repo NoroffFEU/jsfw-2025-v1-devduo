@@ -16,6 +16,7 @@ h2,
 h3,
 h4 {
   font-family: var(--font-heading);
+  font-weight: var(--font-weight-normal);
 }
 
 h1 {
@@ -35,6 +36,7 @@ h4 {
 
 p {
   text-wrap: pretty;
+  letter-spacing: 0.015rem;
 }
 
 /*-----------------------Button and Links-----------------------*/
