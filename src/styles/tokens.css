@@ -70,6 +70,9 @@
   --color-header-bg: var(--color-green);
   --color-footer-text: var(--color-white);
   --color-footer-bg: var(--color-green);
+  --color-contact-button-text: var(--color-white);
+  --color-contact-button: var(--color-orange);
+  --color-contact-button-hover: var(--color-green);
 }
 
 @media (prefers-color-scheme: dark) {
