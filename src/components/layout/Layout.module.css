@@ -3,16 +3,3 @@
   min-height: 100dvh;
   grid-template-rows: auto 1fr auto;
 }
-
-.mainContainer {
-  max-width: var(--width-xl);
-  margin: 0 auto;
-  width: 100%;
-  padding: 3rem 2rem;
-}
-
-@media (--width-sm) {
-  .mainContainer {
-    padding: 3rem 1rem;
-  }
-}
