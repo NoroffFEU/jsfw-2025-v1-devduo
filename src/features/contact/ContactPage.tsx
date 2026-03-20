@@ -6,7 +6,7 @@ const ContactPage = () => {
     <div className={styles.contactPageWrapper}>
       <div className={styles.contactText}>
         <h1>Contact Us</h1>
-        <p>
+        <p className={styles.contactTextP}>
           Have a question or feedback? <br /> We'd love to hear from you.
         </p>
       </div>

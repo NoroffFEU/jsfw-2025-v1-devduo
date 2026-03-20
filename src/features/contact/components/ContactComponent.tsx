@@ -62,7 +62,7 @@ export function ContactForm() {
           className={errors.email ? styles.inputError : styles.input}
           aria-describedby={errors.email ? "email-error" : undefined}
         />
-        {errors.name && (
+        {errors.email && (
           <span id="email-error" className={styles.error} role="alert">
             {errors.email}
           </span>
@@ -84,7 +84,7 @@ export function ContactForm() {
           className={errors.subject ? styles.inputError : styles.input}
           aria-describedby={errors.subject ? "subject-error" : undefined}
         />
-        {errors.name && (
+        {errors.subject && (
           <span id="subject-error" className={styles.error} role="alert">
             {errors.subject}
           </span>
@@ -106,7 +106,7 @@ export function ContactForm() {
           className={errors.message ? styles.inputError : styles.input}
           aria-describedby={errors.message ? "message-error" : undefined}
         />
-        {errors.name && (
+        {errors.message && (
           <span id="message-error" className={styles.error} role="alert">
             {errors.message}
           </span>

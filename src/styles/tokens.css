@@ -6,6 +6,9 @@
   --color-red: #a71508;
   --color-gray: #c9d2d4;
   --color-green: #284b4f;
+  --color-success-green: #51cf66;
+  --color-dark-orange: #cc4400;
+  --color-button-white: #ffffff;
 
   /* SPACING */
   --space-sm: 1rem;
@@ -20,7 +23,8 @@
 
   /* BORDERS */
   --border-radius: 0.3125rem;
-  --border-width: 1px;
+  --border-width: 2px;
+  --border-dark-green: var(--color-green);
 
   /* SHADOWS */
   --shadow-button: 1px 2px 2px 0 rgba(19, 19, 19, 0.25);
@@ -63,15 +67,15 @@
   --color-border: var(--color-black);
   --color-accent: var(--color-orange);
   --color-disabled: var(--color-gray);
-  --color-success: var(--color-green);
+  --color-success: var(--color-success-green);
   --color-warning: var(--color-orange);
   --color-error: var(--color-red);
   --color-header-text: var(--color-white);
   --color-header-bg: var(--color-green);
   --color-footer-text: var(--color-white);
   --color-footer-bg: var(--color-green);
-  --color-contact-button-text: var(--color-white);
-  --color-contact-button: var(--color-orange);
+  --color-contact-button-text: var(--color-button-white);
+  --color-contact-button: var(--color-dark-orange);
   --color-contact-button-hover: var(--color-green);
 }
 

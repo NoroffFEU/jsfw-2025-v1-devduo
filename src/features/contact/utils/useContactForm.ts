@@ -1,5 +1,4 @@
 // custom hook for contact form
-//need fix: sending/reset form + check for errors after the user has done changes!
 import { useState } from "react";
 import { contactSchema } from "./validation";
 import type { ContactFormData } from "./validation";
@@ -51,6 +50,10 @@ export function useContactForm() {
     setIsSubmitted(true);
     setFormData(emptyForm);
     setErrors({});
+
+    setTimeout(() => {
+      setIsSubmitted(false);
+    }, 8000);
   }
 
   return { formData, errors, isSubmitted, handleChange, handleSubmit };
