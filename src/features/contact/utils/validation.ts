@@ -1,4 +1,4 @@
-import { z } from "Zod";
+import { z } from "zod";
 
 // Zod used for both validation and typing - the typing rules are set in this file.
 // z.object() describes the sets of rules for your form data by describing how the data needs to look for each input field to pass the validation.
