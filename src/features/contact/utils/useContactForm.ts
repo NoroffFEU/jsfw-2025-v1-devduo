@@ -1,5 +1,5 @@
 // custom hook for contact form
-import { useState, type ChangeEvent } from "react";
+import { useState, type ChangeEvent, type SubmitEvent } from "react";
 import { contactSchema } from "./validation";
 import type { ContactFormData } from "./validation";
 
