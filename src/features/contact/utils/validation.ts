@@ -14,7 +14,7 @@ export const contactSchema = z.object({
   name: z.string().min(3, "Your full name must contain at least 3 characters"),
   email: z.email("Please enter a valid email address"),
   subject: z.string().min(3, "The subject must contain at least 3 characters"),
-  message: z.string().min(10, "The message muts contain at least 10 characters"),
+  message: z.string().min(10, "The message must contain at least 10 characters"),
 }) satisfies z.ZodType<ContactFormData>;
 //satisfies = checks that contactSchema match the interface and use Zod to validate
 
