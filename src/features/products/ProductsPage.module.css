@@ -1,0 +1,22 @@
+.pageContainer {
+  max-width: var(--width-xl);
+  margin: 0 auto 6rem;
+}
+
+.productHeadline {
+  margin: 6rem 2rem 2rem;
+}
+
+.productsGridWrapper {
+  padding: 0 2rem;
+}
+
+@media (--width-md) {
+  .productHeadline {
+    margin: 4rem 1rem 1rem;
+  }
+
+  .productsGridWrapper {
+    padding: 0 1rem;
+  }
+}

@@ -36,6 +36,7 @@
   --font-heading: "Inter", sans-serif;
   --font-logo: "Judson", serif;
 
+  --font-size-xs: 0.875rem;
   --font-size-sm: 1rem;
   --font-size-md: 1.125rem;
   --font-size-lg: 1.25rem;
@@ -48,6 +49,7 @@
   --font-size-h3: var(--font-size-lg);
   --font-size-h4: var(--font-size-md);
 
+  --font-weight-light: 200;
   --font-weight-normal: 400;
   --font-weight-bold: 700;
 }

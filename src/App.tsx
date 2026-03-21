@@ -15,12 +15,11 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/products" element={<ProductsPage />} />
+          <Route path="/product/id" element={<ProductDetailPage />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/checkout" element={<CheckoutSuccessPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/notfound" element={<PageNotFoundPage />} />
-          <Route path="/product/:id" element={<ProductDetailPage />} />
-          <Route path="/products" element={<ProductsPage />} />
         </Routes>
       </Layout>
     </BrowserRouter>

@@ -1,0 +1,11 @@
+.primaryButton {
+  display: flex;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  width: fit-content;
+  color: var(--color-black);
+  background-color: var(--color-accent);
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--border-radius);
+}
