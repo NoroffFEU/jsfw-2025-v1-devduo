@@ -27,7 +27,7 @@ export function ContactForm() {
       <div className={styles.field}>
         <label htmlFor="name" className={styles.label}>
           <UserIcon className={styles.icon} aria-hidden="true" />
-          Full Name<span className={styles.required}>*</span>
+          Full Name<span>*</span>
         </label>
         <input
           id="name"
