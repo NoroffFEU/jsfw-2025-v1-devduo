@@ -5,9 +5,9 @@ const ContactPage = () => {
   return (
     <div className={styles.contactPageWrapper}>
       <div className={styles.contactText}>
-        <h1>Contact Us</h1>
+        <h1 className={styles.contactH1}>Contact Us</h1>
         <p className={styles.contactTextP}>
-          Have a question or feedback? <br /> We'd love to hear from you.
+          Do you have a question or feedback? We'd love to hear from you.
         </p>
       </div>
       <ContactForm />
