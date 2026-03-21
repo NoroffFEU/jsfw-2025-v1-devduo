@@ -8,6 +8,7 @@
   --color-green: #284b4f;
   --color-success-green: #51cf66;
   --color-dark-orange: #cc4400;
+  --color-dark-success: #284b4f;
   --color-button-white: #ffffff;
 
   /* SPACING */
@@ -84,5 +85,6 @@
     --color-bg: var(--color-black);
     --color-text: var(--color-white);
     --color-border: var(--color-white);
+    --color-success: var(--color-dark-success);
   }
 }
