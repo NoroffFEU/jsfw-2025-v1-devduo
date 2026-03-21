@@ -44,7 +44,6 @@ export function useContactForm() {
       return;
     }
 
-    console.log("Message sent:", result.data);
     setIsSubmitted(true);
     setFormData(emptyForm);
     setErrors({});
