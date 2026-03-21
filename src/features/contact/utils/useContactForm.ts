@@ -1,5 +1,5 @@
 // custom hook for contact form
-import { useState } from "react";
+import { useState, type ChangeEvent } from "react";
 import { contactSchema } from "./validation";
 import type { ContactFormData } from "./validation";
 
@@ -17,9 +17,7 @@ export function useContactForm() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  function handleChange(
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) {
+  function handleChange(event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     const { name, value } = event.target;
 
     //handles all inputs, reads the name attribute to update correct input value
@@ -31,7 +29,7 @@ export function useContactForm() {
     }
   }
 
-  function handleSubmit(event: React.SubmitEvent) {
+  function handleSubmit(event: SubmitEvent) {
     event.preventDefault();
 
     const result = contactSchema.safeParse(formData);
