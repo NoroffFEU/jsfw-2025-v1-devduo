@@ -1,5 +1,5 @@
 // custom hook for contact form
-import { useState, type ChangeEvent } from "react";
+import { useEffect, useRef, useState, type ChangeEvent } from "react";
 import { contactSchema } from "./validation";
 import type { ContactFormData } from "./validation";
 
@@ -16,6 +16,15 @@ export function useContactForm() {
   const [formData, setFormData] = useState<ContactFormData>(emptyForm);
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const successTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (successTimeoutRef.current !== null) {
+        clearTimeout(successTimeoutRef.current);
+      }
+    };
+  }, []);
 
   function handleChange(event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     const { name, value } = event.target;
@@ -49,7 +58,10 @@ export function useContactForm() {
     setFormData(emptyForm);
     setErrors({});
 
-    setTimeout(() => {
+    if (successTimeoutRef.current !== null) {
+      clearTimeout(successTimeoutRef.current);
+    }
+    successTimeoutRef.current = setTimeout(() => {
       setIsSubmitted(false);
     }, 8000);
   }
