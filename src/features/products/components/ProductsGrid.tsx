@@ -4,6 +4,17 @@ import ErrorMessage from "../../../components/shared/error/ErrorMessage";
 import Loader from "../../../components/shared/loader/Loader";
 import type { ProductGridProps } from "../../../types/types";
 
+/**
+ * Renders a grid of product cards with loading and error states.
+ *
+ * @example
+ * <ProductsGrid
+ *   loading={isLoading}
+ *   error={errorMessage}
+ *   productsList={products}
+ *   className="custom-class"
+ * />
+ */
 const ProductsGrid = ({
   error,
   loading,
