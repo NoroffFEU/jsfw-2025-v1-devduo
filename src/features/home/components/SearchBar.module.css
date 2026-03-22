@@ -9,8 +9,7 @@ input {
 .searchBarWrapper {
   margin: 1rem 0 0 0;
   display: flex;
-  justify-content: center;
-  align-self: center;
+  justify-self: center;
   width: fit-content;
   position: relative;
 }
@@ -26,10 +25,7 @@ input {
 }
 
 .searchBar:focus {
-  outline: 0.15rem solid var(--color-accent);
-}
-
-.searchBar::placeholder {
+  outline: 1px solid var(--color-header-text);
 }
 
 .searchIcon {
@@ -41,6 +37,15 @@ input {
   color: var(--color-black);
   filter: opacity(0.7);
   margin: 0 0.5rem 0 0;
+}
+
+.filteredProductsWrapper {
+  position: relative;
+  background-color: var(--color-bg);
+  padding: 4rem;
+  margin: 2rem 0;
+  z-index: 1000;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.6);
 }
 
 @media (--width-md) {
