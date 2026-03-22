@@ -6,6 +6,10 @@
   --color-red: #a71508;
   --color-gray: #c9d2d4;
   --color-green: #284b4f;
+  --color-success-green: #51cf66;
+  --color-dark-orange: #cc4400;
+  --color-dark-success: #284b4f;
+  --color-button-white: #ffffff;
 
   /* SPACING */
   --space-sm: 1rem;
@@ -19,12 +23,14 @@
   --width-xl: 1400px;
 
   /* BORDERS */
-  --border-radius: 0.625rem;
-  --border-width: 1px;
+  --border-radius: 0.3125rem;
+  --border-width: 2px;
+  --border-dark-green: var(--color-green);
 
   /* SHADOWS */
-  --shadow-button: 1px 2px 2px 0 rgba(19, 19, 19, 0.25);
   --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-button: 1px 2px 2px 0 rgba(19, 19, 19, 0.25);
+  --box-shadow: 2px 3px 4px rgba(19, 19, 19, 0.25);
 
   /* TYPOGRAPHY */
   --font-body: "Open Sans", sans-serif;
@@ -65,11 +71,16 @@
   --color-border: var(--color-black);
   --color-accent: var(--color-orange);
   --color-disabled: var(--color-gray);
-  --color-success: var(--color-green);
+  --color-success: var(--color-success-green);
   --color-warning: var(--color-orange);
   --color-error: var(--color-red);
   --color-header-text: var(--color-white);
   --color-header-bg: var(--color-green);
+  --color-footer-text: var(--color-white);
+  --color-footer-bg: var(--color-green);
+  --color-contact-button-text: var(--color-button-white);
+  --color-contact-button: var(--color-dark-orange);
+  --color-contact-button-hover: var(--color-green);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -77,5 +88,6 @@
     --color-bg: var(--color-black);
     --color-text: var(--color-white);
     --color-border: var(--color-white);
+    --color-success: var(--color-dark-success);
   }
 }
