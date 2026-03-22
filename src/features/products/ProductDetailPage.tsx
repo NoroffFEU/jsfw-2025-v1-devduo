@@ -1,5 +1,5 @@
 const ProductDetailPage = () => {
-  return <main>Cart Page</main>;
+  return <main>Single Product Page</main>;
 };
 
 export default ProductDetailPage;
