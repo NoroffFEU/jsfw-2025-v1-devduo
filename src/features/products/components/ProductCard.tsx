@@ -23,7 +23,7 @@ const ProductCard = ({
   const hasDiscount = isDiscounted({ defaultPrice, discountedPrice });
 
   return (
-    <Link to={`../ProductDetailPage/${productId}`} className={styles.productLink}>
+    <Link to={`../product/${productId}`} className={styles.productLink}>
       <article className={styles.productCardContainer}>
         <img
           className={styles.productImage}
