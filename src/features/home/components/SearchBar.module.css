@@ -1,0 +1,63 @@
+.searchBarWrapper {
+  margin: 1rem 0 0 0;
+  display: flex;
+  justify-self: center;
+  width: fit-content;
+  position: relative;
+}
+
+.searchBar {
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  background-color: var(--color-white);
+  color: var(--color-black);
+  min-width: 30vw;
+  max-height: 50px;
+  font-size: var(--font-size-md);
+}
+
+.searchBar:focus {
+  outline: 1px solid var(--color-header-text);
+}
+
+.searchIcon {
+  position: absolute;
+  right: 0;
+  top: 25%;
+  height: 1.5rem;
+  width: 1.5rem;
+  color: var(--color-black);
+  filter: opacity(0.7);
+  margin: 0 0.5rem 0 0;
+}
+
+.filteredProductsWrapper:past {
+  display: flex;
+}
+
+.filteredProductsWrapper {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px)) !important;
+  justify-items: center;
+  position: relative;
+  background-color: var(--color-bg);
+  padding: 4rem;
+  margin: 2rem 0;
+  z-index: 1000;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.6);
+}
+
+.message {
+  color: var(--color-warning);
+  margin: 1rem 0 0 0;
+}
+
+@media (--width-md) {
+  .searchBar {
+    padding: 0.75rem;
+    font-size: var(--font-size-sm);
+  }
+
+  .searchIcon {
+    top: 22%;
+  }
+}
