@@ -1,5 +1,13 @@
 const CheckoutSuccessPage = () => {
-  return <main>Checkout Success!</main>;
+  return (
+    <>
+      <section>
+        <div>
+          <h1>Checkout Successfully done!</h1>
+        </div>
+      </section>
+    </>
+  );
 };
 
 export default CheckoutSuccessPage;
