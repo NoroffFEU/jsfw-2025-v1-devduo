@@ -31,7 +31,13 @@
   margin: 0 0.5rem 0 0;
 }
 
+.filteredProductsWrapper:past {
+  display: flex;
+}
+
 .filteredProductsWrapper {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px)) !important;
+  justify-items: center;
   position: relative;
   background-color: var(--color-bg);
   padding: 4rem;

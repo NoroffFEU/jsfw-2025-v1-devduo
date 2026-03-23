@@ -52,7 +52,7 @@ const SearchBar = () => {
       <div>
         {filteredProducts && filteredProducts.length === 0 && (
           <p className={styles.message}>
-            {`No products found on the search query: ${query}`}
+            {`No products found on the search for: ${query}`}
           </p>
         )}
         {query && filteredProducts && filteredProducts.length > 0 && (
