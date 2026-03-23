@@ -1,10 +1,21 @@
+import { CheckCircleIcon } from "@heroicons/react/24/outline";
+import styles from "./CheckoutSuccessPage.module.css";
+import PrimaryButton from "../../components/buttons/PrimaryButton";
+
 const CheckoutSuccessPage = () => {
   return (
     <>
       <section>
-        <div>
+        <article className={styles.headlineWrapper}>
+          <CheckCircleIcon className={styles.icon} />
           <h1>Checkout Successfully done!</h1>
-        </div>
+          <p>
+            Thank you for your purchase. Your order has been confirmed and will be shipped
+            soon.
+          </p>
+          <PrimaryButton path="/" text="Back to home" />
+        </article>
+        <div></div>
       </section>
     </>
   );
