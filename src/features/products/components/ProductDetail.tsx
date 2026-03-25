@@ -29,7 +29,7 @@ const ProductDetail = ({ product, onAddToCart }: ProductDetailProps) => {
       {/* Back Button */}
       <Link to="/products" className={styles.backlink}>
         <ArrowLeftIcon className={styles.backIcon} aria-hidden="true" />
-        <span>Back to Product</span>
+        <span>Back to Products</span>
       </Link>
 
       {/* Product Image Section */}
