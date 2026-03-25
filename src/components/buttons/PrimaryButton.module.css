@@ -4,8 +4,16 @@
   font-weight: var(--font-weight-bold);
   text-align: center;
   width: fit-content;
-  color: var(--color-black);
-  background-color: var(--color-accent);
+  background-color: var(--color-contact-button);
+  color: var(--color-contact-button-text);
   padding: 0.75rem 1.75rem;
   border-radius: var(--border-radius);
+}
+
+.primaryButton:hover {
+  background-color: var(--color-contact-button-hover);
+}
+.primaryButton:focus-visible {
+  outline: 4px solid #284b4f;
+  outline-offset: 4px;
 }
