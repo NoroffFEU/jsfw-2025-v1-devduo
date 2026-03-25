@@ -7,7 +7,7 @@ const CheckoutSuccessPage = () => {
     <>
       <section>
         <article className={styles.headlineWrapper}>
-          <CheckCircleIcon className={styles.icon} />
+          <CheckCircleIcon className={styles.icon} aria-hidden="true" />
           <h1>Checkout Successfully done!</h1>
           <p>
             Thank you for your purchase. Your order has been confirmed and will be shipped
