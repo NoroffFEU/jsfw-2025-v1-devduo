@@ -4,7 +4,7 @@
   padding: var(--space-md);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space-lg);
+  gap: var(--space-sm);
 }
 
 .backlink {
