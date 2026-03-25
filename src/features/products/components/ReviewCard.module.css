@@ -25,12 +25,6 @@
   color: var(--color-gray-dark);
   margin: 0;
 }
-.ratingContainer {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: var(--space-sm);
-}
 
 .ratingStars {
   display: flex;
