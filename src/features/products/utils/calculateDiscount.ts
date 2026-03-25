@@ -6,19 +6,18 @@ import type { Discount } from "../../../types/types";
  * @param {Discount} params - The discount parameters.
  * @param {number} params.defaultPrice - The original price before discount.
  * @param {number} params.discountedPrice - The price after discount.
- * @returns {number | null} The discount percentage rounded to the nearest integer,
- * or null if the input is invalid (e.g., defaultPrice <= 0 or discountedPrice > defaultPrice).
+ * @returns {number} The discount percentage rounded to the nearest integer (0 if invalid or no discount).
  */
 
 export const calculateDiscount = ({
   defaultPrice,
   discountedPrice,
-}: Discount): number | null => {
+}: Discount): number => {
   if (discountedPrice === undefined) {
-    return null;
+    return 0;
   }
   if (defaultPrice <= 0 || discountedPrice > defaultPrice) {
-    return null;
+    return 0;
   }
 
   const discountAmount = defaultPrice - discountedPrice;
