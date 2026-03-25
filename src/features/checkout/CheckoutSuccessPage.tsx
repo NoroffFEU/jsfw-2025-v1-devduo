@@ -15,7 +15,6 @@ const CheckoutSuccessPage = () => {
           </p>
           <PrimaryButton path="/" text="Back to home" />
         </article>
-        <div></div>
       </section>
     </>
   );
