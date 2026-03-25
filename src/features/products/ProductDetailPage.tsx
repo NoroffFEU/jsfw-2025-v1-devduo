@@ -1,17 +1,16 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ProductDetail from "./components/ProductDetail";
-import { fetchProducts } from "./services/fetchProducts";
-import { slugify } from "./utils/slugify";
+import { fetchProductBySlug } from "./services/fetchProductBySlug";
+import { useProductsCache } from "../../hooks/useProductsCache";
 import Loader from "../../components/shared/loader/Loader";
 import ErrorMessage from "../../components/shared/error/ErrorMessage";
 import type { Product } from "../../types/api";
-import type { ProductAPIData } from "../../types/types";
 
 const ProductDetailPage = () => {
   const { slug } = useParams<{ slug: string }>();
+  const { fetchAndCache, loading } = useProductsCache();
   const [product, setProduct] = useState<Product | null>(null);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -19,33 +18,24 @@ const ProductDetailPage = () => {
 
     const loadProduct = async () => {
       try {
-        setLoading(true);
-        const response = await fetchProducts();
-
-        const foundProduct = response.data.find(
-          (p: ProductAPIData) => slugify(p.title) === slug,
-        ) as Product | undefined;
-
-        if (!foundProduct) {
-          setError("Product not found");
-          return;
-        }
-
+        setError(null);
+        const products = await fetchAndCache();
+        const foundProduct = fetchProductBySlug(slug, products);
         setProduct(foundProduct);
       } catch (err) {
-        setError(
-          err instanceof Error
-            ? `${err.message}. Try again later.`
-            : "Something went wrong. Try again later.",
-        );
+        const errorMessage =
+          err instanceof Error ? err.message : "Something went wrong. Try again later.";
+        setError(errorMessage);
         console.error(err);
-      } finally {
-        setLoading(false);
       }
     };
 
     loadProduct();
-  }, [slug]);
+  }, [slug, fetchAndCache]);
+
+  if (!slug) {
+    return <ErrorMessage message="No product slug provided" />;
+  }
 
   const handleAddToCart = (productToAdd: Product) => {
     console.log("Add to cart:", productToAdd);
