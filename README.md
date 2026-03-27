@@ -6,7 +6,7 @@
 
 School project built with React, TypeScript, and Vite.
 
-Link to live website: [Heltech online shop](https://heltech.netlify.app/)
+Link to live website: [HelTech online shop](https://heltech.netlify.app/)
 
 ## About
 
