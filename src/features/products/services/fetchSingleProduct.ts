@@ -7,7 +7,7 @@ export const fetchSingleProduct = async (id: string): Promise<Product> => {
     throw new Error("Product ID is required");
   }
 
-  const response = await fetch(`${BASE_URL}/${id}`);
+  const response = await fetch(`${BASE_URL}/${encodeURIComponent(id)}`);
 
   if (!response.ok) {
     if (response.status === 404) {
