@@ -1,54 +1,38 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { use, Suspense } from "react";
+import { useLocation } from "react-router-dom";
 import ProductDetail from "./components/ProductDetail";
-import { fetchProductBySlug } from "./services/fetchProductBySlug";
-import { useProductsCache } from "../../hooks/useProductsCache";
+import { fetchProductById } from "./services/fetchProductById";
 import Loader from "../../components/shared/loader/Loader";
 import ErrorMessage from "../../components/shared/error/ErrorMessage";
-import type { Product } from "../../types/api";
 
 const ProductDetailPage = () => {
-  const { slug } = useParams<{ slug: string }>();
-  const { fetchAndCache, loading } = useProductsCache();
-  const [product, setProduct] = useState<Product | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  const location = useLocation();
+  const id = location.state.id as string | undefined;
 
-  useEffect(() => {
-    if (!slug) return;
+  if (!id) return <ErrorMessage message="Oh no! No product found." />;
 
-    const loadProduct = async () => {
-      try {
-        setError(null);
-        const products = await fetchAndCache();
-        const foundProduct = fetchProductBySlug(slug, products);
-        setProduct(foundProduct);
-      } catch (err) {
-        const errorMessage =
-          err instanceof Error ? err.message : "Something went wrong. Try again later.";
-        setError(errorMessage);
-        console.error(err);
-      }
-    };
+  const productPromise = fetchProductById(id);
 
-    loadProduct();
-  }, [slug, fetchAndCache]);
+  return (
+    <Suspense fallback={<Loader />}>
+      <ProductDetailContent productPromise={productPromise} />
+    </Suspense>
+  );
+};
 
-  if (!slug) {
-    return <ErrorMessage message="No product slug provided" />;
-  }
-
-  const handleAddToCart = (productToAdd: Product) => {
-    console.log("Add to cart:", productToAdd);
-    // TODO: Connect to cart context later
-  };
-
-  if (loading) return <Loader />;
-  if (error) return <ErrorMessage message={error} />;
-  if (!product) return <ErrorMessage message="Product not found" />;
+const ProductDetailContent = ({
+  productPromise,
+}: {
+  productPromise: ReturnType<typeof fetchProductById>;
+}) => {
+  const product = use(productPromise);
 
   return (
     <main>
-      <ProductDetail product={product} onAddToCart={handleAddToCart} />
+      <ProductDetail
+        product={product}
+        onAddToCart={(p) => console.log("Add to cart:", p)}
+      />
     </main>
   );
 };
