@@ -51,7 +51,7 @@ const ProductCard = ({
                 <p className={styles.defaultPrice}>${defaultPrice}</p>
               </>
             ) : (
-              <p className={styles.discountPrice}>{defaultPrice}</p>
+              <p className={styles.discountPrice}>${defaultPrice}</p>
             )}
           </div>
         </div>
