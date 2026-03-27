@@ -1,13 +1,13 @@
 import type { Product, ProductSingle } from "../../../types/api";
 
-const BASE_URL = "https://v2.api.noroff.dev/online-shop";
+const BASE_URL = "https://v2.api.noroff.dev";
 
 export const fetchSingleProduct = async (id: string): Promise<Product> => {
   if (!id) {
     throw new Error("Product ID is required");
   }
 
-  const response = await fetch(`${BASE_URL}/${encodeURIComponent(id)}`);
+  const response = await fetch(`${BASE_URL}/online-shop/${encodeURIComponent(id)}`);
 
   if (!response.ok) {
     if (response.status === 404) {
