@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import ProductDetail from "./components/ProductDetail";
 import Loader from "../../components/shared/loader/Loader";
 import ErrorMessage from "../../components/shared/error/ErrorMessage";
@@ -7,7 +8,8 @@ import { fetchSingleProduct } from "./services/fetchSingleProduct";
 import type { Product } from "../../types/api";
 
 const ProductDetailPage = () => {
-  const id = getQueryParameter("id");
+  const location = useLocation();
+  const id = getQueryParameter("id", location.search);
 
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
