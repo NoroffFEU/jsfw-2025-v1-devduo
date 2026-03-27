@@ -1,25 +1,23 @@
-.primaryButton {
+.secondaryButton {
   display: flex;
   justify-content: center;
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-bold);
   text-align: center;
-  background-color: var(--color-contact-button);
-  color: var(--color-contact-button-text);
+  background-color: transparent;
+  color: var(--color-text);
   padding: 0.75rem 1.75rem;
+  border: 1px solid var(--color-text);
   border-radius: var(--border-radius);
 }
 
-.primaryButton:hover {
-  background-color: var(--color-contact-button-hover);
-}
-.primaryButton:focus-visible {
+.secondaryButton:focus-visible {
   outline: 4px solid #284b4f;
   outline-offset: 4px;
 }
 
 @media (--width-md) {
-  .primaryButton {
+  .secondaryButton {
     font-size: var(--font-size-sm);
   }
 }
