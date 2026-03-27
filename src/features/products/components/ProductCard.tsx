@@ -47,8 +47,8 @@ const ProductCard = ({
           <div className={styles.priceContainer}>
             {hasDiscount ? (
               <>
-                <p className={styles.discountPrice}>{discountedPrice}</p>
-                <p className={styles.defaultPrice}>{defaultPrice}</p>
+                <p className={styles.discountPrice}>${discountedPrice}</p>
+                <p className={styles.defaultPrice}>${defaultPrice}</p>
               </>
             ) : (
               <p className={styles.discountPrice}>{defaultPrice}</p>
