@@ -70,6 +70,7 @@
 
 .trashIcon {
   width: 1.125rem;
+  height: 1.125rem;
 }
 
 @media (--width-md) {
