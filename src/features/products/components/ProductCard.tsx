@@ -1,14 +1,15 @@
 import { Link } from "react-router-dom";
 import placeholderImage from "../../../assets/images/placeholder.webp";
 import styles from "./ProductCard.module.css";
+import { slugify } from "../utils/slugify";
 import { StarIcon } from "@heroicons/react/24/solid";
 import DiscountBadge from "./DiscountBadge";
 import { calculateDiscount } from "../utils/calculateDiscount";
 import { isDiscounted } from "../utils/isDiscounted";
-import { slugify } from "../utils/slugify";
 import type { ProductType } from "../../../types/types";
 
 const ProductCard = ({
+  productId,
   productName,
   productImage,
   imageAltText,
@@ -16,6 +17,7 @@ const ProductCard = ({
   discountedPrice,
   rating,
 }: ProductType) => {
+  // create SEO friendly url
   const slug = slugify(productName);
   // Stores the discount percentage value in a new variable for better readability
   const discountValue = calculateDiscount({ defaultPrice, discountedPrice });
@@ -24,7 +26,7 @@ const ProductCard = ({
   const hasDiscount = isDiscounted({ defaultPrice, discountedPrice });
 
   return (
-    <Link to={`../product/${slug}`} className={styles.productLink}>
+    <Link to={`/product/${slug}?id=${productId}`} className={styles.productLink}>
       <article className={styles.productCardContainer}>
         <img
           className={styles.productImage}
