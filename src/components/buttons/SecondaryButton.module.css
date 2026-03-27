@@ -1,7 +1,6 @@
 .secondaryButton {
   display: flex;
   justify-content: center;
-
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-bold);
   text-align: center;
@@ -15,4 +14,10 @@
 .secondaryButton:focus-visible {
   outline: 4px solid #284b4f;
   outline-offset: 4px;
+}
+
+@media (--width-md) {
+  .secondaryButton {
+    font-size: var(--font-size-sm);
+  }
 }

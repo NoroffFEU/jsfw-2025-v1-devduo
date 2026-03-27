@@ -17,3 +17,9 @@
   outline: 4px solid #284b4f;
   outline-offset: 4px;
 }
+
+@media (--width-md) {
+  .primaryButton {
+    font-size: var(--font-size-sm);
+  }
+}
