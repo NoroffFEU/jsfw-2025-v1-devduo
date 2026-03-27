@@ -20,6 +20,7 @@ function App() {
           <Route path="/checkout-success" element={<CheckoutSuccessPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/notfound" element={<PageNotFoundPage />} />
+          <Route path="*" element={<PageNotFoundPage />} />
         </Routes>
       </Layout>
     </BrowserRouter>
