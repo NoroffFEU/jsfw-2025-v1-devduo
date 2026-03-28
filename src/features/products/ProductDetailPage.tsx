@@ -29,6 +29,7 @@ const ProductDetailPage = () => {
         const fetchedProduct = await fetchSingleProduct(id);
         setProduct(fetchedProduct);
       } catch (err) {
+        window.location.href = "/notfound";
         const errorMessage =
           err instanceof Error ? err.message : "Something went wrong. Try again later.";
         setError(errorMessage);
@@ -41,18 +42,13 @@ const ProductDetailPage = () => {
     loadProduct();
   }, [id]);
 
-  const handleAddToCart = (productToAdd: Product) => {
-    console.log("Add to cart:", productToAdd);
-    // TODO: Connect to cart context later
-  };
-
   if (loading) return <Loader />;
   if (error) return <ErrorMessage message={error} />;
   if (!product) return <ErrorMessage message="Product not found" />;
 
   return (
     <main>
-      <ProductDetail product={product} onAddToCart={handleAddToCart} />
+      <ProductDetail product={product} />
     </main>
   );
 };
