@@ -59,6 +59,12 @@
   gap: 1rem;
 }
 
+@media (--width-lg) {
+  .summaryWrapper {
+    justify-content: flex-start;
+  }
+}
+
 @media (--width-md) {
   .summaryContainer h2 {
     font-size: var(--font-size-lg);
