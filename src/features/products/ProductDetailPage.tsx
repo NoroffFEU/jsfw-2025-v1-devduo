@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import ProductDetail from "./components/ProductDetail";
 import Loader from "../../components/shared/loader/Loader";
 import ErrorMessage from "../../components/shared/error/ErrorMessage";
@@ -15,6 +15,8 @@ const ProductDetailPage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     if (!id) {
       setError("No product ID provided");
@@ -29,10 +31,11 @@ const ProductDetailPage = () => {
         const fetchedProduct = await fetchSingleProduct(id);
         setProduct(fetchedProduct);
       } catch (err) {
-        window.location.href = "/notfound";
-        const errorMessage =
-          err instanceof Error ? err.message : "Something went wrong. Try again later.";
-        setError(errorMessage);
+        // Redirects to notfound page if response.status === 404
+        if (err instanceof Error && err.message === "PAGE_NOT_FOUND") {
+          navigate("/notfound");
+        }
+        setError("Something went wrong. Try again later.");
         console.error(err);
       } finally {
         setLoading(false);
