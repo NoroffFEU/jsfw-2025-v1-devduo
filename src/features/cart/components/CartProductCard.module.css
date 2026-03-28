@@ -12,7 +12,8 @@
 }
 
 .cardImg {
-  max-width: 9rem;
+  width: 100%;
+  height: 9rem;
   object-fit: cover;
 }
 
