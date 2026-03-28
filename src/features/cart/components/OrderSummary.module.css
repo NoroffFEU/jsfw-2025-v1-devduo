@@ -20,8 +20,19 @@
 
 .summaryContentWrapper div {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+}
+
+.itemsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.itemInfoSummary {
+  display: flex;
+  width: 100%;
 }
 
 .horizontalLine {
