@@ -21,6 +21,7 @@ const OrderSummary = () => {
     <article className={styles.summaryContainer}>
       <div className={styles.summaryWrapper}>
         <h2>Order summary</h2>
+
         <div className={styles.summaryContentWrapper}>
           <div className={styles.itemsWrapper}>
             <p>items:</p>
@@ -37,7 +38,7 @@ const OrderSummary = () => {
               );
             })}
           </div>
-          <div>
+          <div className={styles.shippingWrapper}>
             <p>Shipping:</p>
             <span>{Number(total) && Number(total) < 1000 ? "$49.95" : "Free"}</span>
           </div>
@@ -47,8 +48,12 @@ const OrderSummary = () => {
             <span>${total}</span>
           </div>
         </div>
-        <PrimaryButton text="Checkout now" path="/checkout-success" />
-        <SecondaryButton text="Continue shopping" path="/" />
+        <div className={styles.buttonWrapper}>
+          {Number(total) > 0 && (
+            <PrimaryButton text="Checkout now" path="/checkout-success" />
+          )}
+          <SecondaryButton text="Continue shopping" path="/" />
+        </div>
       </div>
     </article>
   );

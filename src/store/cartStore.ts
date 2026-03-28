@@ -21,6 +21,7 @@ export type CartStoreType = {
   addProductToCart: (product: ProductType) => void;
   removeProductFromCart: (productId: string) => void;
   decreaseQuantity: (productId: string) => void;
+  clearCart: () => void;
 };
 
 // Uses Zustands Persist middleware to store the cart state in local storage.
@@ -62,6 +63,8 @@ export const useCartStore = create<CartStoreType>()(
               .filter((item) => item.quantity > 0),
           };
         }),
+      // Clears cart on successful checkout
+      clearCart: () => set({ cart: [] }),
     }),
     {
       name: "cart-storage",

@@ -12,7 +12,6 @@ import { useCartStore } from "../../../store/cartStore";
 
 interface ProductDetailProps {
   product: Product;
-  onAddToCart: (product: Product) => void;
 }
 
 const ProductDetail = ({ product }: ProductDetailProps) => {
@@ -71,11 +70,11 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
         <div className={styles.priceSection}>
           {hasDiscount ? (
             <>
-              <p className={styles.discountedPrice}>{product.discountedPrice}</p>
-              <p className={styles.originalPrice}>{product.price}</p>
+              <p className={styles.discountedPrice}>${product.discountedPrice}</p>
+              <p className={styles.originalPrice}>${product.price}</p>
             </>
           ) : (
-            <p className={styles.discountedPrice}>{product.price}</p>
+            <p className={styles.discountedPrice}>${product.price}</p>
           )}
         </div>
 

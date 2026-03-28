@@ -18,3 +18,8 @@
   color: var(--color-text);
   color: var(--color-header-bg);
 }
+
+.navigationParagraph {
+  text-align: center;
+  font-size: var(--font-size-xs);
+}
