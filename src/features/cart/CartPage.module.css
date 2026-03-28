@@ -1,0 +1,31 @@
+.mainContainer {
+  max-width: var(--width-xl);
+  margin: 6rem auto;
+  padding: 0 2rem;
+}
+
+.headline {
+  margin: 0 0 2rem 0;
+}
+
+.flexContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+@media (--width-md) {
+  .mainContainer {
+    margin: 4rem auto 4rem;
+    padding: 0 1rem;
+  }
+
+  .headline {
+    font-size: var(--font-size-xl);
+  }
+
+  .flexContainer {
+    flex-direction: column;
+  }
+}
