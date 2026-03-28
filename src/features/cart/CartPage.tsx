@@ -9,10 +9,18 @@ const CartPage = () => {
     <>
       <section className={styles.mainContainer}>
         <h1 className={styles.headline}>Shopping cart</h1>
-        <div className={styles.flexContainer}>
-          {cart.map((product) => (
-            <CartProductCard key={product.id} product={product} />
-          ))}
+        <div className={styles.componentWrapper}>
+          {cart[0] ? (
+            <div className={styles.flexContainer}>
+              {cart.map((product) => (
+                <CartProductCard key={product.id} product={product} />
+              ))}
+            </div>
+          ) : (
+            <h2 style={{ textAlign: "center", margin: "4rem 0 0 0" }}>
+              Shopping cart is empty..
+            </h2>
+          )}
           <OrderSummary />
         </div>
       </section>

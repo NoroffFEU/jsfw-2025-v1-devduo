@@ -1,15 +1,16 @@
 import styles from "./CartProductCard.module.css";
 import { TrashIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
-import { useCartStore, type ProductType } from "../../../store/cartStore";
+import { useCartStore, type CartItemType } from "../../../store/cartStore";
 
 type CartPageProps = {
-  product: ProductType;
+  product: CartItemType;
 };
 
 const CartProductCard = ({ product }: CartPageProps) => {
   const addProductToCart = useCartStore((state) => state.addProductToCart);
   const removeProductFromCart = useCartStore((state) => state.removeProductFromCart);
+  const decreaseQuantity = useCartStore((state) => state.decreaseQuantity);
 
   const handleAddToCart = () => {
     addProductToCart(product);
@@ -18,22 +19,35 @@ const CartProductCard = ({ product }: CartPageProps) => {
   const handleRemoveFromCart = () => {
     removeProductFromCart(product.id);
   };
-  console.log(product);
+
+  const handleDecreaseQuantity = () => {
+    decreaseQuantity(product.id);
+  };
 
   return (
-    <article>
+    <article className={styles.outerContainer}>
       <div className={styles.cardContainer}>
         <img className={styles.cardImg} src={product.image.url} alt={product.image.alt} />
         <div className={styles.centerWrapper}>
           <Link to="{`/product/${product.id}`">{product.title}</Link>
-          <div className={styles.priceWrapper}>
-            <span className={styles.discountedPrice}>{product.discountedPrice}</span>
-            <span className={styles.price}>{product.price}</span>
-          </div>
+
+          {product.discountedPrice !== product.price ? (
+            <div className={styles.priceWrapper}>
+              <span className={styles.discountedPrice}>{product.discountedPrice}</span>
+              <span className={styles.price}>{product.price}</span>
+            </div>
+          ) : (
+            <div className={styles.priceWrapper}>
+              <span className={styles.initialPrice}>{product.price}</span>
+            </div>
+          )}
+
           <div className={styles.quantityContainer}>
             <div className={styles.qtyWrapper}>
-              <button className={styles.qtyButton}>-</button>
-              <span>{"1"}</span>
+              <button className={styles.qtyButton} onClick={handleDecreaseQuantity}>
+                -
+              </button>
+              <span>{product.quantity}</span>
               <button className={styles.qtyButton} onClick={handleAddToCart}>
                 +
               </button>
