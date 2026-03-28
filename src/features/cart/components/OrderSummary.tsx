@@ -47,7 +47,9 @@ const OrderSummary = () => {
             <span>${total}</span>
           </div>
         </div>
-        <PrimaryButton text="Checkout now" path="/checkout-success" />
+        {Number(total) > 0 && (
+          <PrimaryButton text="Checkout now" path="/checkout-success" />
+        )}
         <SecondaryButton text="Continue shopping" path="/" />
       </div>
     </article>

@@ -63,6 +63,7 @@ export const useCartStore = create<CartStoreType>()(
               .filter((item) => item.quantity > 0),
           };
         }),
+      // Clears cart on successful checkout
       clearCart: () => set({ cart: [] }),
     }),
     {
