@@ -1,8 +1,16 @@
 import { CheckCircleIcon } from "@heroicons/react/24/outline";
 import styles from "./CheckoutSuccessPage.module.css";
 import PrimaryButton from "../../components/buttons/PrimaryButton";
+import { useCartStore } from "../../store/cartStore";
+import { useEffect } from "react";
 
 const CheckoutSuccessPage = () => {
+  // Clears the cart when page/component mounts
+  const clearCart = useCartStore((state) => state.clearCart);
+  useEffect(() => {
+    clearCart();
+  }, [clearCart]);
+
   return (
     <>
       <section>
