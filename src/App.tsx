@@ -7,11 +7,14 @@ import HomePage from "./features/home/HomePage.tsx";
 import PageNotFoundPage from "./features/notFound/PageNotFoundPage.tsx";
 import ProductDetailPage from "./features/products/ProductDetailPage.tsx";
 import ProductsPage from "./features/products/ProductsPage.tsx";
+import "./store/toastStore";
+import { ToastContainer } from "./components/toast/ToastContainer.tsx";
 
 function App() {
   return (
     <BrowserRouter>
       <Layout>
+        <ToastContainer />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/products" element={<ProductsPage />} />
