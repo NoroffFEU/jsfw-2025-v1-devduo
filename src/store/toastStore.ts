@@ -6,7 +6,7 @@ import type { CartItemType } from "./cartStore";
 export interface ToastMessage {
   id: string;
   message: string;
-  type: "success" | "error";
+  type: "add" | "remove";
 }
 
 interface ToastState {
@@ -52,7 +52,7 @@ useCartStore.subscribe((state) => {
     if (added) {
       useToastStore.getState().addToast({
         message: `${added.title} added to your cart`,
-        type: "success",
+        type: "add",
       });
     }
   } else if (currentTotal < previouseTotal) {
@@ -64,7 +64,7 @@ useCartStore.subscribe((state) => {
     if (removed) {
       useToastStore.getState().addToast({
         message: `${removed.title} removed from your cart`,
-        type: "error",
+        type: "remove",
       });
     }
   }

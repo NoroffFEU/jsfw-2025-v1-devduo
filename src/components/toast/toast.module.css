@@ -22,20 +22,20 @@
 .toastMessage {
   font-size: var(--font-md);
 }
-.success {
+.add {
   background-color: var(--color-success);
   color: var(--color-black);
 }
-.error {
+.remove {
   background-color: var(--color-error);
   color: var(--color-white);
 }
-.error .closeButton {
+.remove .closeButton {
   color: var(--color-white);
 }
 
 @media (prefers-color-scheme: dark) {
-  .success {
+  .add {
     color: var(--color-white);
   }
 }
