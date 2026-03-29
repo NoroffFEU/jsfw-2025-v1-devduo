@@ -2,7 +2,7 @@
 
 Frontend webshop built with React, TypeScript, and Vite.
 
-<p align="center"><img width="553" height="378" alt="image" src="https://github.com/user-attachments/assets/9323ac80-e335-4837-be84-70c43c2d9ff4" /></p>
+<p align="center"><img width="738" height="504" alt="image" src="https://github.com/user-attachments/assets/9323ac80-e335-4837-be84-70c43c2d9ff4" /></p>
 
 
 🔗 **Live site**  
