@@ -1,21 +1,36 @@
 import { Link } from "react-router-dom";
 import styles from "./CartLink.module.css";
 import { useCartStore } from "../../../store/cartStore";
+import type { CartLinkProps } from "../../../types/cart";
 
-const CartLink = () => {
+/**
+ * CartLink component that displays a shopping cart icon with an item count badge.
+ *
+ * This component renders a link to the cart page with a cart icon SVG and conditionally
+ * displays a notification circle showing the total quantity of items in the cart.
+ *
+ * @param {string} props.linkStyle - Optional CSS class name(s) to apply to the cart link element
+ * @param {string} props.circleStyle - Optional CSS class name(s) to apply to the count badge circle
+ * @returns {JSX.Element} A cart link component with optional item count badge
+ *
+ * @example
+ * // Basic usage with custom styles
+ * <CartLink linkStyle={styles.headerLink} circleStyle={styles.countCircle} />
+ */
+const CartLink = ({ linkStyle, circleStyle }: CartLinkProps) => {
+  // Using the Zustand to access the cart state, and the reduce method to calculate the total quantity of products in the cart
   const count = useCartStore((state) =>
     state.cart.reduce((sum, item) => sum + item.quantity, 0),
   );
   return (
     <div className={styles.cartIconWrapper}>
-      <Link to="/cart" className={styles.cartLink} aria-label="Cart">
+      <Link to="/cart" className={`${styles.cartLink} ${linkStyle}`} aria-label="Cart">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}
-          stroke="currentColor"
-          className="size-6">
+          stroke="currentColor">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -23,7 +38,7 @@ const CartLink = () => {
           />
         </svg>
         {count > 0 && (
-          <div className={styles.circle}>
+          <div className={`${styles.circle} ${circleStyle}`}>
             <span className={styles.numberCount}>{count}</span>
           </div>
         )}

@@ -1,7 +1,5 @@
-/* interface cart item/inpuit */
+// Interface cart item/input
 import type { Product } from "./api.ts";
-
-
 export interface CartItem {
   productId: string;
   title: string;
@@ -12,4 +10,13 @@ export interface CartItem {
   imageAlt: string;
 }
 
-export type CartItemInput = Pick<Product, 'id' | 'title' | 'price' | 'discountedPrice' | 'image'> & { quantity?: number }
+export type CartItemInput = Pick<
+  Product,
+  "id" | "title" | "price" | "discountedPrice" | "image"
+> & { quantity?: number };
+
+// Cart Link/icon
+export type CartLinkProps = {
+  linkStyle?: string;
+  circleStyle?: string;
+};

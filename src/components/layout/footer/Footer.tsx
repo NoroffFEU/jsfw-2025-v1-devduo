@@ -2,8 +2,8 @@ import styles from "./Footer.module.css";
 import { Link } from "react-router-dom";
 import { HomeIcon } from "@heroicons/react/24/outline";
 import { ShoppingBagIcon } from "@heroicons/react/24/outline";
-import { ShoppingCartIcon } from "@heroicons/react/24/outline";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
+import CartLink from "../header/CartLink";
 
 const Footer = () => {
   return (
@@ -21,10 +21,10 @@ const Footer = () => {
             <ShoppingBagIcon className={styles.icon} />
             <small>Products</small>
           </Link>
-          <Link to="/cart" className={styles.footerLinks}>
-            <ShoppingCartIcon className={styles.icon} />
-            <small>Cart</small>
-          </Link>
+          <div>
+            <CartLink linkStyle={styles.linkStyle} circleStyle={styles.circleStyle} />
+            <small className={styles.cartName}>Cart</small>
+          </div>
           <Link to="/contact" className={styles.footerLinks}>
             <EnvelopeIcon className={styles.icon} />
             <small>Contact</small>
