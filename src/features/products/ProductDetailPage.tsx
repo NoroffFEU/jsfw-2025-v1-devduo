@@ -1,46 +1,49 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import ProductDetail from "./components/ProductDetail";
-import { fetchProductBySlug } from "./services/fetchProductBySlug";
-import { useProductsCache } from "../../hooks/useProductsCache";
 import Loader from "../../components/shared/loader/Loader";
 import ErrorMessage from "../../components/shared/error/ErrorMessage";
+import { getQueryParameter } from "./utils/getQueryParameter";
+import { fetchSingleProduct } from "./services/fetchSingleProduct";
 import type { Product } from "../../types/api";
 
 const ProductDetailPage = () => {
-  const { slug } = useParams<{ slug: string }>();
-  const { fetchAndCache, loading } = useProductsCache();
+  const location = useLocation();
+  const id = getQueryParameter("id", location.search);
+
   const [product, setProduct] = useState<Product | null>(null);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  const navigate = useNavigate();
+
   useEffect(() => {
-    if (!slug) return;
+    if (!id) {
+      setError("No product ID provided");
+      setLoading(false);
+      return;
+    }
 
     const loadProduct = async () => {
       try {
+        setLoading(true);
         setError(null);
-        const products = await fetchAndCache();
-        const foundProduct = fetchProductBySlug(slug, products);
-        setProduct(foundProduct);
+        const fetchedProduct = await fetchSingleProduct(id);
+        setProduct(fetchedProduct);
       } catch (err) {
-        const errorMessage =
-          err instanceof Error ? err.message : "Something went wrong. Try again later.";
-        setError(errorMessage);
+        // Redirects to notfound page if response.status === 404
+        if (err instanceof Error && err.message === "PAGE_NOT_FOUND") {
+          navigate("/notfound");
+        }
+        setError("Something went wrong. Try again later.");
         console.error(err);
+      } finally {
+        setLoading(false);
       }
     };
 
     loadProduct();
-  }, [slug, fetchAndCache]);
-
-  if (!slug) {
-    return <ErrorMessage message="No product slug provided" />;
-  }
-
-  const handleAddToCart = (productToAdd: Product) => {
-    console.log("Add to cart:", productToAdd);
-    // TODO: Connect to cart context later
-  };
+  }, [id]);
 
   if (loading) return <Loader />;
   if (error) return <ErrorMessage message={error} />;
@@ -48,7 +51,7 @@ const ProductDetailPage = () => {
 
   return (
     <main>
-      <ProductDetail product={product} onAddToCart={handleAddToCart} />
+      <ProductDetail product={product} />
     </main>
   );
 };
