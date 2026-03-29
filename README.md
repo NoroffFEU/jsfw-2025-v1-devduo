@@ -2,9 +2,8 @@
 
 Frontend webshop built with React, TypeScript, and Vite.
 
----
 <img width="922" height="630" alt="image" src="https://github.com/user-attachments/assets/9323ac80-e335-4837-be84-70c43c2d9ff4" />
----
+
 
 🔗 **Live site**  
 https://heltech.netlify.app/
