@@ -1,62 +1,85 @@
 # HelTech Online Shop
 
-School project built with React, TypeScript, and Vite.
+Frontend webshop built with React, TypeScript, and Vite.
 
-- Link to live website: [HelTech online shop](https://heltech.netlify.app/)
-- Link to project planning: [Github Project](https://github.com/users/Torehirth/projects/7)
+🔗 **Live site**  
+https://heltech.netlify.app/
+
+📁 **Project planning**  
+https://github.com/users/Torehirth/projects/7  
+
+---
 
 ## About
 
-HelTech Online Shop is a frontend webshop project with routing, product pages, cart flow, checkout success page, and a contact page.
+This project was developed as part of a school assignment and is a collaboration between two students.
+The main focus was learning modern frontend development while keeping the stack simple and using as few libraries as possible.
+The application includes a complete webshop flow with several core features implemented, including global state management using Zustand.
 
-## Pages
+---
 
-- Home
-- Products
-- Product details
-- Cart
-- Checkout success
-- Contact
-- 404 page
+## Features
+
+- Product listing and details  
+- Cart functionality  
+- Checkout flow with success page  
+- Contact page  
+- Routing and 404 handling  
+
+---
 
 ## Tech Stack
 
-- React
-- TypeScript
-- Vite
+- React  
+- TypeScript  
+- Vite  
 - React Router
-- Vitest
-- Testing Library
-- ESLint
-- Prettier
+- Zustand
+- Vitest  
+- Testing Library  
+- ESLint  
+- Prettier  
+
+---
 
 ## Getting Started
 
-1. Install dependencies:
-   `npm install`
-2. Start the development server:
-   `npm run dev`
+### Install dependencies
 
-## Available Scripts
+npm install
 
-- `npm run dev` - start development server
-- `npm run build` - create production build
-- `npm run preview` - preview production build
-- `npm run test` - run tests
-- `npm run lint` - run ESLint
-- `npm run lint:fix` - fix lint issues
-- `npm run format` - format files with Prettier
+### Start development server
+
+npm run dev
+
+---
+
+## Scripts
+
+npm run dev       # development server  
+npm run build     # production build  
+npm run preview   # preview build  
+npm run test      # run tests  
+npm run lint      # lint code  
+npm run format    # format code  
+
+---
 
 ## Project Structure
 
-- `src/components` - shared UI components
-- `src/features` - feature-based pages and logic
-- `src/hooks` - reusable hooks
-- `src/styles` - global styles and design tokens
-- `src/testing` - test setup and test files
-- `src/types` - shared types
-- `src/utils` - utility functions
+- `components` – reusable UI  
+- `features` – pages and logic  
+- `hooks` – custom hooks  
+- `styles` – global styles  
+- `types` – TypeScript types  
+- `utils` – helper functions
+- `store` – Zustand Store 
+
+---
 
 ## Notes
 
-This project was made as part of a school assignment and focuses on frontend structure, routing, reusable components, and clean project organization.
+- Collaboration between two developers  
+- Focus on learning and implementation  
+- Minimal use of external libraries  
+- Emphasis on clean structure and reusable components  
