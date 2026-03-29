@@ -1,4 +1,4 @@
-# AI Usage Log
+# AI Usage Log by Tore M. Hirth
 
 ## Entry 1
 - **Tool used:** ChatGPT  
