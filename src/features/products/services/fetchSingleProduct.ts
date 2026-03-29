@@ -11,7 +11,7 @@ export const fetchSingleProduct = async (id: string): Promise<Product> => {
 
   if (!response.ok) {
     if (response.status === 404) {
-      throw new Error("Product not found");
+      throw new Error("PAGE_NOT_FOUND");
     }
     throw new Error("Failed to fetch product");
   }

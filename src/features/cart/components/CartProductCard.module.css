@@ -1,13 +1,19 @@
+.outerContainer {
+  width: fit-content;
+  height: fit-content;
+}
+
 .cardContainer {
   display: flex;
   border-radius: var(--border-radius);
   box-shadow: 1px 1px 4px var(--color-header-bg);
-  width: fit-content;
   padding: 1.5rem;
+  max-height: 12rem;
 }
 
 .cardImg {
-  max-width: 9rem;
+  width: 9rem;
+  height: 9rem;
   object-fit: cover;
 }
 
@@ -35,6 +41,10 @@
   text-decoration: line-through;
   filter: opacity(0.5);
   font-weight: var(--font-weight-light);
+}
+
+.initialPrice {
+  font-size: var(--font-size-md);
 }
 
 .quantityContainer {
@@ -78,6 +88,7 @@
     flex-direction: column;
     gap: 1rem;
     padding: 1rem;
+    max-height: fit-content;
   }
 
   .centerWrapper {

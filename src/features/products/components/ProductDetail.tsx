@@ -8,13 +8,20 @@ import { calculateDiscount } from "../utils/calculateDiscount";
 import { isDiscounted } from "../utils/isDiscounted";
 import styles from "./ProductDetail.module.css";
 import type { Product } from "../../../types/api";
+import { useCartStore } from "../../../store/cartStore";
 
 interface ProductDetailProps {
   product: Product;
-  onAddToCart: (product: Product) => void;
 }
 
-const ProductDetail = ({ product, onAddToCart }: ProductDetailProps) => {
+const ProductDetail = ({ product }: ProductDetailProps) => {
+  // Accessing state from Zustand useCartStore
+  const addToCart = useCartStore((state) => state.addProductToCart);
+  // Creating a handler function for adding products to cart
+  const handleAddToCart = () => {
+    addToCart(product);
+  };
+
   const discountValue = calculateDiscount({
     defaultPrice: product.price,
     discountedPrice: product.discountedPrice,
@@ -63,11 +70,11 @@ const ProductDetail = ({ product, onAddToCart }: ProductDetailProps) => {
         <div className={styles.priceSection}>
           {hasDiscount ? (
             <>
-              <p className={styles.discountedPrice}>{product.discountedPrice}</p>
-              <p className={styles.originalPrice}>{product.price}</p>
+              <p className={styles.discountedPrice}>${product.discountedPrice}</p>
+              <p className={styles.originalPrice}>${product.price}</p>
             </>
           ) : (
-            <p className={styles.discountedPrice}>{product.price}</p>
+            <p className={styles.discountedPrice}>${product.price}</p>
           )}
         </div>
 
@@ -93,10 +100,7 @@ const ProductDetail = ({ product, onAddToCart }: ProductDetailProps) => {
           </section>
         )}
 
-        <button
-          type="button"
-          onClick={() => onAddToCart(product)}
-          className={styles.cartButton}>
+        <button type="button" onClick={handleAddToCart} className={styles.cartButton}>
           <ShoppingCartIcon className={styles.cartIcon} aria-hidden="true" />
           Add to Cart
         </button>
