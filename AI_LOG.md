@@ -2,27 +2,33 @@
 
 ## Entry 1
 - **Tool used:** ChatGPT  
-- **Date:** [insert date or date range]  
+- **Date:** 23 February 2026 – 29 March 2026 (project timeline)  
 - **Purpose:** Used ChatGPT throughout the project in a dedicated project workspace to ask follow-up questions related to the assignment. The main use was support with Git commands, understanding CSS and JavaScript methods, debugging errors, and guidance on installing libraries and NPM packages.  
 - **Outcome:** Improved understanding of workflow and technical issues. The answers were used as guidance, and the final implementation was written and adjusted by me.
 
 ## Entry 2
 - **Tool used:** Figma Make  
-- **Date:** [insert date]  
+- **Date:** 23 February 2026  
 - **Purpose:** Used to help with prototyping and exploring layout ideas in the design phase.  
 - **Outcome:** Helped speed up early design decisions and gave a clearer starting point for the interface design.
 
 ## Entry 3
 - **Tool used:** GitHub Copilot  
-- **Date:** [insert date]  
+- **Date:** 23 February 2026 – 29 March 2026 (project timeline)  
 - **Purpose:** Used to help write pull request descriptions on GitHub.  
 - **Outcome:** Made PR descriptions clearer and more structured, which improved collaboration and documentation in the project.
 
 ## Entry 4
 - **Tool used:** VS Code AI features  
-- **Date:** [insert date]  
+- **Date:** 23 February 2026 – 29 March 2026 (project timeline)  
 - **Purpose:** Used for generating JSDoc comments for functions and components.  
 - **Outcome:** Improved code documentation and helped make the project easier to read and maintain.
+
+## Entry 5
+- **Tool used:** ChatGPT  
+- **Date:** 29 March 2026  
+- **Purpose:** Used to improve the structure and layout of the repository README.md.  
+- **Outcome:** Improved text structure and clarity, making the documentation easier to read.
 
 ---
 
