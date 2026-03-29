@@ -13,7 +13,9 @@ https://github.com/users/Torehirth/projects/7
 ## About
 
 This project was developed as part of a school assignment and is a collaboration between two students.
+
 The main focus was learning modern frontend development while keeping the stack simple and using as few libraries as possible.
+
 The application includes a complete webshop flow with several core features implemented, including global state management using Zustand.
 
 ---
