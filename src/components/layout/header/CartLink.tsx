@@ -18,6 +18,7 @@ import type { CartLinkProps } from "../../../types/cart";
  * <CartLink linkStyle={styles.headerLink} circleStyle={styles.countCircle} />
  */
 const CartLink = ({ linkStyle, circleStyle }: CartLinkProps) => {
+  // Using the Zustand to access the cart state, and the reduce method to calculate the total quantity of products in the cart
   const count = useCartStore((state) =>
     state.cart.reduce((sum, item) => sum + item.quantity, 0),
   );
