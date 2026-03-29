@@ -18,7 +18,7 @@ export function Toast({ toast, onClose }: ToastProps) {
         onClick={onClose}
         aria-label={`Dismiss: ${toast.message}`}
         className={styles.closeButton}>
-        X
+        x
       </button>
     </div>
   );
